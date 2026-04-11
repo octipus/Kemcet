@@ -1,0 +1,277 @@
+{
+  "sections": {
+    "5dc1bd50-de5e-4404-96b7-423093b0c67c": {
+      "type": "hero-alt",
+      "blocks": {
+        "template--17783568236859__5dc1bd50-de5e-4404-96b7-423093b0c67c-1674923377d69f6ea8-0": {
+          "type": "text",
+          "settings": {
+            "subtitle": "AUSTRALIAN SWIMWEAR BRAND",
+            "title": "Thank you FAE 🖤",
+            "content": "<p>We would like to give a special shout-out to FAE for allowing us to use their incredible content for our Sahara theme. </p><p>Follow <a href=\"https://www.instagram.com/fae/\" target=\"_blank\" title=\"https://www.instagram.com/fae/\">@FAE</a> on Instagram and visit their website via this <a href=\"https://www.fae.house/\" target=\"_blank\" title=\"https://www.fae.house/\">link</a>.</p><p>---</p><p>Sahara theme is made with 🖤 <br/>by Shopify agency <a href=\"https://digifist.com/\" target=\"_blank\" title=\"https://digifist.com/\">DigiFist</a>.</p>",
+            "button_style": "button--filled",
+            "button_text": "View more",
+            "button_url": "/",
+            "button_separator": true
+          }
+        },
+        "template--17783568236859__5dc1bd50-de5e-4404-96b7-423093b0c67c-1674923377d69f6ea8-1": {
+          "type": "media",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "template--17783568236859__5dc1bd50-de5e-4404-96b7-423093b0c67c-1674923377d69f6ea8-0",
+        "template--17783568236859__5dc1bd50-de5e-4404-96b7-423093b0c67c-1674923377d69f6ea8-1"
+      ],
+      "settings": {
+        "hero_alt_banner_height": 50,
+        "section_width": "page",
+        "color_scheme": "scheme-3",
+        "spacing_top": "2",
+        "spacing_bottom": "2",
+        "section_border": "none"
+      }
+    },
+    "rich_text_9NM7yJ": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "layout": "boxed",
+        "heading": "FAE'S Story",
+        "heading_size": "h2",
+        "content": "<p>FAE started as a love story between founders Bianca and Adam Bennetts, who met in Bali in 2015. A holiday romance quickly turned into a forever kind of love, and as they planned their future they realised they shared a similar vision in the fashion world.<br/><br/>Bianca and Adam started chatting business plans over cocktails in the Bali sun, with a focus on creating high-end yet sustainable swimwear. Bianca began designing bikinis in their villa in Seminyak, countless samples were produced in Denpasar, and before too long they realised they were onto a special product worthy of taking to the world. FAE was born.<br/><br/>Now worn and loved by beachgoers and celebrities worldwide, FAE established its name quickly, with every range more progressive than the one before and the Essence of FAE apparent in every piece. Each collection has been carefully curated to blend, so FAE girls can mix-and-match their favourite pieces and can pair block-coloured separates with carefully-curated prints.<br/><br/>Bianca delves into the past with her inspiration pulled from the '80s and '90s, but never forgets FAE's place as a forward thinking brand of the future. Sustainability, durability and luxury are always at the front of her mind when choosing the highest quality Italian fabrics.<br/><br/>After eight years the the FAE team remains tight with Bianca working as Creative Director and Adam as CEO, while the Bennetts clan continues to grow, with six-year-old Ziggy recently joined by baby sister Honey.</p>",
+        "text_size": 1,
+        "content_position": "center",
+        "section_width": "narrow",
+        "color_scheme": "scheme-1",
+        "spacing_top": "0",
+        "spacing_bottom": "0",
+        "section_border": "none"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_page_title": false,
+        "heading_size": "h2",
+        "title_alignment": "center",
+        "info_title": "FAE's Story",
+        "heading_size_info": "h4",
+        "info_content": "<p>FAE started as a love story between founders Bianca and Adam Bennetts, who met in Bali in 2015. A holiday romance quickly turned into a forever kind of love, and as they planned their future they realised they shared a similar vision in the fashion world.<br/><br/>Bianca and Adam started chatting business plans over cocktails in the Bali sun, with a focus on creating high-end yet sustainable swimwear. Bianca began designing bikinis in their villa in Seminyak, countless samples were produced in Denpasar, and before too long they realised they were onto a special product worthy of taking to the world. FAE was born.<br/><br/>Now worn and loved by beachgoers and celebrities worldwide, FAE established its name quickly, with every range more progressive than the one before and the Essence of FAE apparent in every piece. Each collection has been carefully curated to blend, so FAE girls can mix-and-match their favourite pieces and can pair block-coloured separates with carefully-curated prints.<br/><br/>Bianca delves into the past with her inspiration pulled from the '80s and '90s, but never forgets FAE's place as a forward thinking brand of the future. Sustainability, durability and luxury are always at the front of her mind when choosing the highest quality Italian fabrics.<br/><br/>After eight years the the FAE team remains tight with Bianca working as Creative Director and Adam as CEO, while the Bennetts clan continues to grow, with six-year-old Ziggy recently joined by baby sister Honey.</p>",
+        "section_width": "narrow",
+        "spacing_top": "2",
+        "spacing_bottom": "2",
+        "section_border": "none"
+      }
+    },
+    "shoppable_63fDYq": {
+      "type": "shoppable",
+      "blocks": {
+        "shoppable_social_item_tkC3V3": {
+          "type": "shoppable-social-item",
+          "settings": {
+            "social_post_content": "<p>SUMMER MOOD 🍒</p><p>#summer #sun #swim #bikini</p>",
+            "social_post_url": "https://www.instagram.com/fae/",
+            "tag_story": "hashtag",
+            "social_avatar_object_fit": "cover",
+            "social_username": "Sahara",
+            "product_01": "kendall-top-intimacy",
+            "product_01_dot_x": 40,
+            "product_01_dot_y": 50,
+            "product_02_dot_x": 50,
+            "product_02_dot_y": 50,
+            "product_03_dot_x": 50,
+            "product_03_dot_y": 50,
+            "product_04_dot_x": 50,
+            "product_04_dot_y": 50
+          }
+        },
+        "shoppable_social_item_FxH3EP": {
+          "type": "shoppable-social-item",
+          "settings": {
+            "social_post_content": "<p>The bikini of the season💙 Gypsy top and Goi bottoms in Ibiza is back in stock!</p>",
+            "social_post_url": "https://www.instagram.com/fae/",
+            "tag_story": "hashtag",
+            "social_avatar_object_fit": "cover",
+            "social_username": "Sahara",
+            "product_01": "gypsy-top-ibiza",
+            "product_01_dot_x": 55,
+            "product_01_dot_y": 83,
+            "product_02": "goi-bottoms-ibiza",
+            "product_02_dot_x": 50,
+            "product_02_dot_y": 50,
+            "product_03_dot_x": 50,
+            "product_03_dot_y": 50,
+            "product_04_dot_x": 50,
+            "product_04_dot_y": 50
+          }
+        },
+        "shoppable_social_item_cizRrp": {
+          "type": "shoppable-social-item",
+          "settings": {
+            "social_post_content": "<p>BALI High Summer ‘24 🌴 Starring @sara amidst the captivating island vibes… Explore New</p>",
+            "social_post_url": "https://www.instagram.com/fae/",
+            "tag_story": "hashtag",
+            "social_avatar_object_fit": "cover",
+            "social_username": "Sahara",
+            "product_01": "kendall-top-verde",
+            "product_01_dot_x": 36,
+            "product_01_dot_y": 58,
+            "product_02_dot_x": 50,
+            "product_02_dot_y": 50,
+            "product_03_dot_x": 50,
+            "product_03_dot_y": 50,
+            "product_04_dot_x": 50,
+            "product_04_dot_y": 50
+          }
+        },
+        "shoppable_social_item_HEqrFK": {
+          "type": "shoppable-social-item",
+          "settings": {
+            "social_post_content": "<p>Happy National Bikini Day! Check your inbox for a special surprise 😉💌</p>",
+            "social_post_url": "https://www.instagram.com/fae/",
+            "tag_story": "hashtag",
+            "social_avatar_object_fit": "cover",
+            "social_username": "Sahara",
+            "product_01": "goldie-top-aloha",
+            "product_01_dot_x": 36,
+            "product_01_dot_y": 36,
+            "product_02": "koa-bottoms-aloha",
+            "product_02_dot_x": 35,
+            "product_02_dot_y": 65,
+            "product_03": "gypsy-top-aloha",
+            "product_03_dot_x": 55,
+            "product_03_dot_y": 37,
+            "product_04": "jones-bottoms-aloha",
+            "product_04_dot_x": 78,
+            "product_04_dot_y": 65
+          }
+        },
+        "shoppable_social_item_kbYtmL": {
+          "type": "shoppable-social-item",
+          "settings": {
+            "social_post_content": "<p>BEST-SELLERS RESTOCK 🧡 Your favourites are back in stock! Add to cart while you can!</p>",
+            "social_post_url": "https://www.instagram.com/fae/",
+            "tag_story": "hashtag",
+            "social_avatar_object_fit": "cover",
+            "social_username": "Sahara",
+            "product_01": "luna-top-espresso",
+            "product_01_dot_x": 22,
+            "product_01_dot_y": 40,
+            "product_02": "vada-bottoms-nero",
+            "product_02_dot_x": 62,
+            "product_02_dot_y": 75,
+            "product_03_dot_x": 50,
+            "product_03_dot_y": 50,
+            "product_04_dot_x": 50,
+            "product_04_dot_y": 50
+          }
+        },
+        "shoppable_social_item_aJQF9z": {
+          "type": "shoppable-social-item",
+          "settings": {
+            "social_post_content": "<p>Summer days are dreamier in Ivory ✨ Sara wears the Honey top and Birdie bottoms</p>",
+            "social_post_url": "https://www.instagram.com/fae/",
+            "tag_story": "hashtag",
+            "social_avatar_object_fit": "cover",
+            "social_username": "Sahara",
+            "product_01": "honey-top-ivory",
+            "product_01_dot_x": 50,
+            "product_01_dot_y": 50,
+            "product_02": "goldie-top-ivory",
+            "product_02_dot_x": 16,
+            "product_02_dot_y": 50,
+            "product_03": "birdie-bottoms-ivory",
+            "product_03_dot_x": 50,
+            "product_03_dot_y": 78,
+            "product_04": "koa-bottoms-ivory",
+            "product_04_dot_x": 20,
+            "product_04_dot_y": 88
+          }
+        },
+        "shoppable_social_item_DBkqBT": {
+          "type": "shoppable-social-item",
+          "settings": {
+            "social_post_content": "<p>Sunsoaked summer days in our Bali Collection 🩵💙</p>",
+            "social_post_url": "https://www.instagram.com/fae/",
+            "tag_story": "hashtag",
+            "social_avatar_object_fit": "cover",
+            "social_username": "Sahara",
+            "product_01": "aria-one-piece-azure",
+            "product_01_dot_x": 25,
+            "product_01_dot_y": 50,
+            "product_02": "gypsy-top-ibiza",
+            "product_02_dot_x": 64,
+            "product_02_dot_y": 41,
+            "product_03": "goi-bottoms-ibiza",
+            "product_03_dot_x": 76,
+            "product_03_dot_y": 69,
+            "product_04_dot_x": 50,
+            "product_04_dot_y": 50
+          }
+        },
+        "shoppable_social_item_p3BNct": {
+          "type": "shoppable-social-item",
+          "settings": {
+            "social_post_content": "<p>BEST-SELLERS RESTOCK 🧡 Your favourites are back in stock! Add to cart while you can!</p>",
+            "social_post_url": "https://www.instagram.com/fae/",
+            "tag_story": "hashtag",
+            "social_avatar_object_fit": "cover",
+            "social_username": "Sahara",
+            "product_01": "goldie-top-coconut",
+            "product_01_dot_x": 50,
+            "product_01_dot_y": 50,
+            "product_02": "isla-bottoms",
+            "product_02_dot_x": 50,
+            "product_02_dot_y": 88,
+            "product_03_dot_x": 50,
+            "product_03_dot_y": 50,
+            "product_04_dot_x": 50,
+            "product_04_dot_y": 50
+          }
+        }
+      },
+      "block_order": [
+        "shoppable_social_item_tkC3V3",
+        "shoppable_social_item_FxH3EP",
+        "shoppable_social_item_cizRrp",
+        "shoppable_social_item_HEqrFK",
+        "shoppable_social_item_kbYtmL",
+        "shoppable_social_item_aJQF9z",
+        "shoppable_social_item_DBkqBT",
+        "shoppable_social_item_p3BNct"
+      ],
+      "settings": {
+        "layout": "grid",
+        "aspect_ratio_for_layout": "1/1",
+        "grid_items": "4",
+        "tag_items_slides_perview": 7,
+        "source_of_slide": "manual",
+        "show_dots": true,
+        "button_label": "Shop The Look",
+        "button_label_style": "button--filled",
+        "header_layout": "compact",
+        "header_title": "Instagram",
+        "heading_size": "h2",
+        "follow_button_label": "Follow Us",
+        "social_username": "Sahara",
+        "social_url": "https://www.instagram.com/fae/",
+        "button_style": "button--outlined",
+        "color_scheme_for_items": "scheme-2",
+        "aspect_ratio": "auto",
+        "section_width": "max-w-page",
+        "spacing_top": "6",
+        "spacing_bottom": "6",
+        "section_border": "none"
+      }
+    }
+  },
+  "order": [
+    "5dc1bd50-de5e-4404-96b7-423093b0c67c",
+    "rich_text_9NM7yJ",
+    "main",
+    "shoppable_63fDYq"
+  ]
+}

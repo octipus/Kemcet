@@ -1,0 +1,71 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "enable_transparent_header": true,
+        "section_height": 60,
+        "banner_layout": "banner--full",
+        "section_width": "page",
+        "color_scheme": "scheme-6",
+        "spacing_top": "2",
+        "spacing_bottom": "2",
+        "section_border": "none"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "96d74506-d90d-4c41-b78f-4d67853600e5": {
+          "type": "text-card",
+          "settings": {
+            "position": 7,
+            "title": "Designed by women, for all women. Sahara SS25.",
+            "text_size": "1",
+            "button_style": "button--outlined"
+          }
+        }
+      },
+      "block_order": [
+        "96d74506-d90d-4c41-b78f-4d67853600e5"
+      ],
+      "settings": {
+        "enable_products_count": true,
+        "products_per_row_ui": true,
+        "enable_sorting": true,
+        "filters_style": "drawer",
+        "sidebar_navigation": "collection-sidebar-menu",
+        "products_per_page": 14,
+        "products_per_row_default": "4",
+        "products_per_row_mobile": "2",
+        "pagination_style": "load_more",
+        "button_style": "button--outlined",
+        "section_width": "page",
+        "spacing_top": "0",
+        "spacing_bottom": "2",
+        "section_border": "none"
+      }
+    },
+    "rich_text_tWPJWj": {
+      "type": "rich-text",
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "layout": "boxed",
+        "heading": "SAHARA: HOTTEST SWIMSUITS",
+        "heading_size": "h2",
+        "content": "<p>Escape to sunnier days with Sahara, the sustainable swimwear brand that brings together fashion, function, and sustainability. Our collection features beautiful images of confident models rocking our chic and stylish swimsuits, all while enjoying the summer vibes. But our brand is about more than just looking good – it's about doing good, too. That's why we use eco-friendly materials and ethical production practices to create swimsuits that not only make a statement, but also make a difference. Whether you're hitting the beach or the pool, Sahara has the perfect swimsuit for you. So dive in and join us in making a positive impact on the planet, one swimsuit at a time.</p>",
+        "content_position": "center",
+        "section_width": "page",
+        "color_scheme": "scheme-3",
+        "spacing_top": "6",
+        "spacing_bottom": "6",
+        "section_border": "none"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "main",
+    "rich_text_tWPJWj"
+  ]
+}

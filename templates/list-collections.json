@@ -1,0 +1,45 @@
+{
+  "sections": {
+    "d945af54-80c9-4f7f-b030-4736d222d2cb": {
+      "type": "page-banner",
+      "settings": {
+        "enable_transparent_header": false,
+        "heading_size": "h2",
+        "show_default_description": true,
+        "show_on_description": "desktop",
+        "content_position": "center",
+        "content_alignment": "center",
+        "media_position": "background",
+        "enable_breadcrumbs": true,
+        "section_height": "50svh",
+        "show_controls_on_video": false,
+        "section_height_mobile": "33svh",
+        "show_controls_on_video_mobile": false,
+        "search_bar": false,
+        "search_bar_placeholder": "Search for 'return' or 'size'",
+        "section_width": "page",
+        "color_scheme": "scheme-4",
+        "spacing_top": "6",
+        "spacing_bottom": "6",
+        "section_border": "none"
+      }
+    },
+    "main": {
+      "type": "main-list-collections",
+      "settings": {
+        "collections_to_show": "all",
+        "collections_per_page": 12,
+        "color_scheme_for_collection_cards": "scheme-6",
+        "section_width": "page",
+        "color_scheme": "scheme-1",
+        "spacing_top": "2",
+        "spacing_bottom": "2",
+        "section_border": "none"
+      }
+    }
+  },
+  "order": [
+    "d945af54-80c9-4f7f-b030-4736d222d2cb",
+    "main"
+  ]
+}
