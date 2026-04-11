@@ -46,6 +46,7 @@
   endcapture
 
   assign timer_layout = timer_layout | default: '1'
+  assign unit_label_style = unit_label_style | default: 'full'
 
 	# calculate diff between now and timer
 	assign now_date_seconds = 'now' | date: '%s'
@@ -83,16 +84,21 @@
     endcapture
   endif
 
-	# timer text
-	assign timer_day_text = 'countdown_timer.day' | t: count: diff_day_count
-	assign timer_hour_text = 'countdown_timer.hour' | t: count: diff_hour_count
-	assign timer_minute_text = 'countdown_timer.minute' | t: count: diff_minute_count
-	assign timer_second_text = 'countdown_timer.second' | t: count: diff_second_count
+	# timer text (full labels, short abbreviations, or first letter)
   if timer_text_first_letter
+    assign timer_day_text = 'countdown_timer.day' | t: count: diff_day_count
+    assign timer_hour_text = 'countdown_timer.hour' | t: count: diff_hour_count
+    assign timer_minute_text = 'countdown_timer.minute' | t: count: diff_minute_count
+    assign timer_second_text = 'countdown_timer.second' | t: count: diff_second_count
     assign timer_day_text = timer_day_text | split: '' | first
     assign timer_hour_text = timer_hour_text | split: '' | first
     assign timer_minute_text = timer_minute_text | split: '' | first
     assign timer_second_text = timer_second_text | split: '' | first
+  elsif unit_label_style == 'short'
+    assign timer_day_text = 'countdown_timer.day_short' | t
+    assign timer_hour_text = 'countdown_timer.hour_short' | t
+    assign timer_minute_text = 'countdown_timer.minute_short' | t
+    assign timer_second_text = 'countdown_timer.second_short' | t
   else
     assign timer_day_text = 'countdown_timer.day' | t: count: diff_day_count
     assign timer_hour_text = 'countdown_timer.hour' | t: count: diff_hour_count
@@ -101,7 +107,11 @@
   endif
 %}
 
-<div {% if class %}class="{{ class }}"{% endif %}>
+<div
+  {% if class != blank or unit_label_style == 'short' %}
+    class="{% if class != blank %}{{ class }}{% endif %}{% if unit_label_style == 'short' %}{% if class != blank %} {% endif %}countdown-timer--labels-short{% endif %}"
+  {% endif %}
+>
   <countdown-timer
     id="timer-{{ id }}"
     class="countdown-timer loading-effect"
@@ -126,7 +136,9 @@
 					<div class="countdown-timer__column countdown-timer__column--{{ column_type }} days">
 						<div>
 							<span class="countdown-timer__column-number">0</span>
-							<span class="countdown-timer__column-text">{{ timer_day_text }}</span>
+							{%- if show_unit_labels != false -%}
+								<span class="countdown-timer__column-text">{{ timer_day_text }}</span>
+							{%- endif -%}
 						</div>
 					</div>
 				{% endif %}
@@ -135,7 +147,9 @@
 					<div class="countdown-timer__column countdown-timer__column--{{ column_type }} hours">
 						<div>
 							<span class="countdown-timer__column-number">0</span>
-							<span class="countdown-timer__column-text">{{ timer_hour_text }}</span>
+							{%- if show_unit_labels != false -%}
+								<span class="countdown-timer__column-text">{{ timer_hour_text }}</span>
+							{%- endif -%}
 						</div>
 					</div>
 				{% endif %}
@@ -144,7 +158,9 @@
 					<div class="countdown-timer__column countdown-timer__column--{{ column_type }} minutes">
 						<div>
 							<span class="countdown-timer__column-number">0</span>
-							<span class="countdown-timer__column-text">{{ timer_minute_text }}</span>
+							{%- if show_unit_labels != false -%}
+								<span class="countdown-timer__column-text">{{ timer_minute_text }}</span>
+							{%- endif -%}
 						</div>
 					</div>
 				{% endif %}
@@ -153,7 +169,9 @@
 					<div class="countdown-timer__column countdown-timer__column--{{ column_type }} seconds">
 						<div>
 							<span class="countdown-timer__column-number">0</span>
-							<span class="countdown-timer__column-text">{{ timer_second_text }}</span>
+							{%- if show_unit_labels != false -%}
+								<span class="countdown-timer__column-text">{{ timer_second_text }}</span>
+							{%- endif -%}
 						</div>
 					</div>
 				{% endif %}

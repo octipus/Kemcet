@@ -457,7 +457,11 @@
     "second": {
       "one": "Second",
       "other": "Seconds"
-    }
+    },
+    "day_short": "d",
+    "hour_short": "h",
+    "minute_short": "min",
+    "second_short": "sec"
   },
   "products": {
     "card-product": {

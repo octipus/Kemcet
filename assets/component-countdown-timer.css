@@ -1,13 +1,21 @@
 .countdown-timer {
   display: block;
+  width: 100%;
 }
 
 .countdown-timer__columns {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(1.2rem, 3vw, 2.8rem);
+  width: 100%;
 }
 
 .countdown-timer__column {
-  flex: auto;
+  flex: 0 1 auto;
+  min-width: clamp(4.8rem, 18vw, 8rem);
+  max-width: 100%;
 }
 
 .countdown-timer__column > div {
@@ -15,6 +23,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.6rem;
 }
 
 .countdown-timer__column--col > div {
@@ -23,14 +32,34 @@
 
 .countdown-timer__column--row > div {
   flex-direction: row;
+  gap: 0.8rem;
 }
 
 .countdown-timer__column:first-child .countdown-timer__column-number:before {
   display: none;
 }
 
+.countdown-timer__column-number {
+  display: block;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.05;
+}
+
 .countdown-timer__column-text {
+  display: block;
+  max-width: 100%;
+  font-size: clamp(1rem, 2.6vw, 1.2rem);
+  line-height: 1.25;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.countdown-timer--labels-short .countdown-timer__column-text {
+  font-size: clamp(0.85rem, 2.2vw, 1rem);
+  letter-spacing: 0.12em;
+  text-transform: none;
 }
 
 @media screen and (min-width: 750px) {

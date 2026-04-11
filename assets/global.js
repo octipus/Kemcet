@@ -7,7 +7,7 @@ let header = document.querySelector(
 let headerGroup = document.querySelector(
   '.shopify-section-group-header-group'
 );
-let announcementBar = headerGroup.querySelector(
+let announcementBar = headerGroup?.querySelector(
   '.js-announcement-bar'
 );
 

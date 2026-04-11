@@ -3332,6 +3332,10 @@
         },
         "logo_width_mobile": {
           "label": "Logo width for mobile"
+        },
+        "header_background_color": {
+          "label": "Background color",
+          "info": "Overrides the color scheme background. If the Password section uses a full-page background image, turn off “Show page background through header” there to keep this color visible."
         }
       }
     },
@@ -3360,41 +3364,97 @@
     "main-password": {
       "name": "Password",
       "settings": {
-        "title": {
-          "label": "Heading"
+        "header_background": {
+          "content": "Background"
         },
-        "subtext": {
-          "label": "Subtext"
+        "background_image": {
+          "label": "Image",
+          "info": "Covers the full page, including the password header. Set the focal point in the image editor."
         },
-        "header_email_signup": {
-          "content": "Email signup"
+        "background_overlay_opacity": {
+          "label": "Image overlay",
+          "info": "Darkens the image so text stays readable. Set to 0% to disable."
         },
-        "email_signup": {
-          "label": "Show email signup form"
+        "header_transparent_over_image": {
+          "label": "Show page background through header",
+          "info": "When a page background image is set, the header is see-through so the image continues behind it. Turn off to use a solid header color from the Password header section."
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Heading",
+          "settings": {
+            "title": {
+              "label": "Heading"
+            },
+            "subtext": {
+              "label": "Subtext"
+            },
+            "show_shop_password_message": {
+              "label": "Show password page message",
+              "info": "Uses the message set in Online store → Preferences → Password protection."
+            }
+          }
         },
-        "email_signup_title": {
-          "label": "Title"
+        "newsletter": {
+          "name": "Email signup",
+          "settings": {
+            "email_signup_title": {
+              "label": "Title"
+            },
+            "email_signup_text": {
+              "label": "Text"
+            },
+            "glass_background": {
+              "label": "Glass effect background",
+              "info": "Frosted glass look with blur. Works best with a page background image."
+            }
+          }
         },
-        "email_signup_text": {
-          "label": "Text"
+        "countdown": {
+          "name": "Countdown timer",
+          "settings": {
+            "heading": {
+              "label": "Heading",
+              "info": "Optional text shown above the timer."
+            },
+            "header_labels": {
+              "content": "Unit labels"
+            },
+            "show_unit_labels": {
+              "label": "Show unit labels"
+            },
+            "unit_label_style": {
+              "label": "Label style",
+              "info": "Short labels use compact abbreviations (for example min, sec). Full labels follow your theme translations and plural rules.",
+              "options": {
+                "full": {
+                  "label": "Full (Days, Hours, …)"
+                },
+                "short": {
+                  "label": "Short (d, h, min, sec)"
+                }
+              }
+            }
+          }
         },
-        "header_colors": {
-          "content": "Colors"
-        },
-        "color_main": {
-          "label": "Main"
-        },
-        "color_body": {
-          "label": "Body text"
-        },
-        "color_background": {
-          "label": "Background"
-        },
-        "color_border": {
-          "label": "Border"
-        },
-        "color_logo": {
-          "label": "Shopify logo"
+        "store_links": {
+          "name": "Store links",
+          "settings": {
+            "show_admin_callout": {
+              "label": "Show admin login link"
+            },
+            "show_social_links": {
+              "label": "Show social media icons",
+              "info": "Uses URLs from Theme settings → Social media. Only icons with a link set are shown."
+            },
+            "social_links_new_tab": {
+              "label": "Open social links in a new tab"
+            },
+            "show_powered_by_shopify": {
+              "label": "Show “Powered by Shopify”"
+            }
+          }
         }
       }
     },

@@ -549,7 +549,11 @@
     "second": {
       "one": "Sekunde",
       "other": "Sekunden"
-    }
+    },
+    "day_short": "d",
+    "hour_short": "h",
+    "minute_short": "min",
+    "second_short": "sec"
   },
   "sections": {
     "announcement_bar": {
