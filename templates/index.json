@@ -79,7 +79,7 @@
       "name": "t:sections.featured-products.name",
       "settings": {
         "layout": "layout-1",
-        "heading": "Heading for Featured Products",
+        "heading": "New Arrivals",
         "heading_size": "h2",
         "button_text": "View all",
         "button_url": "",
