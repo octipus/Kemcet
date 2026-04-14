@@ -131,10 +131,12 @@
         "b24138db-2e60-43bf-a7d4-d853a4298828": {
           "type": "image-link-text",
           "settings": {
+            "menu_item_position": 2,
             "color_scheme": "scheme-6",
+            "image": "shopify://shop_images/KEM_12323.jpg",
             "content_vertical_alignment": "center",
-            "card_title": "Heading goes here",
-            "card_link_type": "card",
+            "card_title": "",
+            "card_link_type": "button",
             "card_button_text": "",
             "card_button_url": ""
           }
