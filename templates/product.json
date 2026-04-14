@@ -106,7 +106,7 @@
       "settings": {
         "product_media_layout": "product__media-layout--full",
         "slides_with_thumbs": "desktop_and_mobile",
-        "product_media_object_fit": "contain",
+        "product_media_object_fit": "cover",
         "thumb_media_object_fit": "cover",
         "media_aspect_ratio": "default",
         "adaptive_ratio_and_auto_height": "default",
@@ -114,7 +114,7 @@
         "show_tags_on_mobile": true,
         "enable_actions_bar": true,
         "horizontal_alignment": "text-left",
-        "section_width": "fluid",
+        "section_width": "full",
         "color_scheme": "scheme-1",
         "spacing_top": "0",
         "spacing_bottom": "0",
