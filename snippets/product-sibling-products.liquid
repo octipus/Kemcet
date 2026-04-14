@@ -1,0 +1,90 @@
+{%- liquid
+  assign display_type = block.settings.display_type | default: 'swatches'
+  assign product_title = product.title | split: '-' | first | escape
+  assign swatch_shape = settings.swatch_shape
+-%}
+
+<div
+  class="product-selector product-selector--buttons product-sibling{% if display_type == 'featured_image' %} product-sibling--images{% endif %}"
+  {{ block.shopify_attributes }}
+>
+  <fieldset class="product-options product-sibling__fieldset" data-input-wrapper>
+    <legend class="product-selector__label">{{- 'Color' -}}</legend>
+    <div class="product-options__value-list product-sibling__value-list" data-open="false">
+      <ul class="slim-scrollbar">
+        {%- for related_product in block.settings.product_list -%}
+          {%- assign prod_name = related_product.title | split: '-' | first | escape -%}
+
+          {%- if prod_name == product_title -%}
+            {%- assign is_current = false -%}
+            {%- if product.title == related_product.title -%}
+              {%- assign is_current = true -%}
+            {%- endif -%}
+            {%- assign sibling_label = related_product.title | split: '-' | last | strip | escape -%}
+
+            {%- if display_type == 'swatches' -%}
+              {%- for color in related_product.metafields.shopify.color-pattern.value -%}
+                {%- assign related_color_name = color.color -%}
+                {%- assign related_color_image = color.image.value -%}
+              {%- endfor -%}
+              {%- liquid
+                assign swatch_css = ''
+                if related_color_image != blank
+                  assign swatch_img_url = related_color_image | image_url: width: 96
+                  assign swatch_css = '--swatch-background: url(' | append: swatch_img_url | append: ');'
+                elsif related_color_name != blank
+                  assign swatch_css = '--swatch-background: ' | append: related_color_name | append: ';'
+                endif
+              -%}
+              <li>
+                <div
+                  class="product-options__item product-options__item--swatch swatch--{{ swatch_shape }}{% if is_current %} is-active{% endif %}"
+                  {% if swatch_css != blank %}style="{{ swatch_css }}"{% endif %}
+                >
+                  <a
+                    class="prerender product-sibling__link"
+                    href="{{ related_product.url }}"
+                    {% if is_current %}aria-current="page"{% endif %}
+                    title="{{ sibling_label }}"
+                  >
+                    <span class="product-options__input" role="presentation" aria-hidden="true"></span>
+                    <span class="visually-hidden">{{ sibling_label }}</span>
+                  </a>
+                </div>
+              </li>
+            {%- else -%}
+              <li>
+                <div class="product-options__item product-options__item--image{% if is_current %} is-active{% endif %}">
+                  <a
+                    class="product-options__label prerender product-sibling__link"
+                    href="{{ related_product.url }}"
+                    {% if is_current %}aria-current="page"{% endif %}
+                    title="{{ sibling_label }}"
+                  >
+                    {%- if related_product.featured_image != blank -%}
+                      {%- liquid
+                        assign image_alt = related_product.featured_image.alt | default: sibling_label | escape
+                      -%}
+                      {{- related_product.featured_image
+                        | image_url: width: 200
+                        | image_tag:
+                          loading: 'lazy',
+                          width: related_product.featured_image.width,
+                          height: related_product.featured_image.height,
+                          alt: image_alt,
+                          class: 'product-sibling__image-img'
+                      -}}
+                    {%- else -%}
+                      {{- 'product-1' | placeholder_svg_tag: 'product-sibling__image-placeholder' -}}
+                    {%- endif -%}
+                    <span class="visually-hidden">{{ sibling_label }}</span>
+                  </a>
+                </div>
+              </li>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </div>
+  </fieldset>
+</div>

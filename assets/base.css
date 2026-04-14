@@ -3357,13 +3357,14 @@ button.shopify-payment-button__button {
 }
 .product-options__item--swatch.is-active .product-options__input,
 .product-options__item--swatch:has(.is-active) .product-options__input {
-  border-color: rgba(var(--color-foreground), 1);
+  /* border-color: rgba(var(--color-foreground), 1); */
+  box-shadow: rgba(var(--color-foreground), 0.16) 0px 1px 1px, rgb(var(--color-foreground)) 0px 0px 0px 0.06rem;
 }
 .product-options__item--swatch.swatch--circle .product-options__input {
   border-radius: 50%;
 }
 .product-options__item--swatch:hover .product-options__input {
-  transform: scale(1.25);
+  transform: scale(1.05);
 }
 .product-options__item--swatch .product-options__label {
   display: none;
