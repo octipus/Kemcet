@@ -59,7 +59,7 @@
             "products": [],
             "collection": "tops",
             "title": "",
-            "show_unavailable_products": false
+            "show_unavailable_products": true
           }
         },
         "collection_9YQCcY": {
@@ -68,7 +68,7 @@
             "products": [],
             "collection": "bottoms",
             "title": "",
-            "show_unavailable_products": false
+            "show_unavailable_products": true
           }
         }
       },
