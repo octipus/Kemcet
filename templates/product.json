@@ -14,7 +14,10 @@
       "blocks": {
         "1e0c79e9-7de0-4eee-b9c5-f27132635fb8": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "show_variant_colour": true,
+            "show_product_subtitle": true
+          }
         },
         "8effeb43-55b7-4ec4-ab9b-68bcd89b865b": {
           "type": "price",
@@ -92,9 +95,9 @@
         "7be6b89c-da83-4ff2-9b85-44fb28cbfa27"
       ],
       "settings": {
-        "product_media_layout": "product__media-layout--partial",
-        "slides_with_thumbs": "only_mobile",
-        "product_media_object_fit": "contain",
+        "product_media_layout": "product__media-layout--full",
+        "slides_with_thumbs": "desktop_and_mobile",
+        "product_media_object_fit": "cover",
         "thumb_media_object_fit": "contain",
         "media_aspect_ratio": "default",
         "adaptive_ratio_and_auto_height": "default",
