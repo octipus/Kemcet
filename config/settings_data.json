@@ -104,7 +104,7 @@
           "background_gradient": "",
           "primary_text": "#ffffff",
           "secondary_text": "#333333",
-          "heading_text": "#333333",
+          "heading_text": "#ffffff",
           "filled_button": "#ffffff",
           "filled_button_label": "#333333",
           "outlined_button_label": "#ffffff",
