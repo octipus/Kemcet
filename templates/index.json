@@ -26,7 +26,7 @@
             "enable_vertical_line": true,
             "button_text": "Shop New arrivals",
             "button_url": "shopify://collections/all-products",
-            "button_style": "button--outlined",
+            "button_style": "button--filled",
             "image": "shopify://shop_images/KEM_12357.jpg",
             "video_external": "",
             "enable_media_overlay_desktop": true,
