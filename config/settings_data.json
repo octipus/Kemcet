@@ -46,7 +46,7 @@
     "enable_dynamic_checkout": true,
     "enable_cart_upsell": true,
     "cart_upsell_title": "Complete the set",
-    "disable_animations_on_mobile": false,
+    "disable_animations_on_mobile": true,
     "enable_cart_notes": true,
     "sections": {
       "main-password-header": {
