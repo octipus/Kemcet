@@ -118,12 +118,21 @@
             "dot_position_horizontal": 69,
             "dot_position_vertical": 47
           }
+        },
+        "slide_jDmin3": {
+          "type": "slide",
+          "settings": {
+            "product": "",
+            "dot_position_horizontal": 50,
+            "dot_position_vertical": 50
+          }
         }
       },
       "block_order": [
         "slide_WqVdCY",
         "slide_ANKANy",
-        "slide_ndmjdE"
+        "slide_ndmjdE",
+        "slide_jDmin3"
       ],
       "name": "t:sections.shop-the-look.name",
       "settings": {
