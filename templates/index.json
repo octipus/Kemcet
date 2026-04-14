@@ -15,7 +15,7 @@
         "slide_DedQ6n": {
           "type": "slide",
           "settings": {
-            "banner_layout": "hero-banner--30-70",
+            "banner_layout": "hero-banner--full",
             "color_scheme": "scheme-2",
             "header_menu_text_color": "#fafafa",
             "content_position_horizontal": "align-end text-right",
@@ -23,7 +23,7 @@
             "subtitle": "",
             "title": "KEM:2K26",
             "content": "",
-            "enable_vertical_line": true,
+            "enable_vertical_line": false,
             "button_text": "Shop New arrivals",
             "button_url": "shopify://collections/all-products",
             "button_style": "button--filled",
