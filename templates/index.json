@@ -255,20 +255,10 @@
             "title": "",
             "show_unavailable_products": false
           }
-        },
-        "8d8dee3c-2bdb-429e-9a6c-e5af884f102b": {
-          "type": "collection",
-          "settings": {
-            "products": [],
-            "collection": "best-sellers",
-            "title": "",
-            "show_unavailable_products": false
-          }
         }
       },
       "block_order": [
-        "collection_mYMTLa",
-        "8d8dee3c-2bdb-429e-9a6c-e5af884f102b"
+        "collection_mYMTLa"
       ],
       "settings": {
         "layout": "layout-1",
