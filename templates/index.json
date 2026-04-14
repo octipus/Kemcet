@@ -50,57 +50,6 @@
         "slider_color_scheme": "scheme-6"
       }
     },
-    "16e24524-2040-41a4-b5ca-3a425d62879b": {
-      "type": "featured-collections",
-      "blocks": {
-        "0502c0ed-6d29-4e80-9d4d-bef13b8c626f": {
-          "type": "collection-slide",
-          "settings": {
-            "collection": "tops",
-            "heading": "",
-            "heading_size": "h3",
-            "color_scheme": "scheme-6"
-          }
-        },
-        "8e756427-f886-410c-b65a-f8a1f0767ff1": {
-          "type": "collection-slide",
-          "settings": {
-            "collection": "swimwear",
-            "heading": "",
-            "heading_size": "h3",
-            "color_scheme": "scheme-6"
-          }
-        },
-        "8410b9c7-f0ae-4be3-8e77-8d3411d02273": {
-          "type": "collection-slide",
-          "settings": {
-            "collection": "bottoms",
-            "heading": "",
-            "heading_size": "h3",
-            "color_scheme": "scheme-6"
-          }
-        }
-      },
-      "block_order": [
-        "0502c0ed-6d29-4e80-9d4d-bef13b8c626f",
-        "8e756427-f886-410c-b65a-f8a1f0767ff1",
-        "8410b9c7-f0ae-4be3-8e77-8d3411d02273"
-      ],
-      "settings": {
-        "layout": "layout-1",
-        "heading": "Our Collections",
-        "heading_size": "h2",
-        "button_text": "Explore all",
-        "button_url": "shopify://collections",
-        "button_style": "button--outlined",
-        "card_style": "compact",
-        "section_width": "page",
-        "color_scheme": "",
-        "spacing_top": "2",
-        "spacing_bottom": "2",
-        "section_border": "none"
-      }
-    },
     "90e984e6-6e27-4581-ad90-2ced240882b7": {
       "type": "full-width-banner",
       "blocks": {
@@ -1351,7 +1300,6 @@
   },
   "order": [
     "1658995208ad05f95f",
-    "16e24524-2040-41a4-b5ca-3a425d62879b",
     "90e984e6-6e27-4581-ad90-2ced240882b7",
     "shoppable_hYqxPy",
     "1658994245757c7b20",
