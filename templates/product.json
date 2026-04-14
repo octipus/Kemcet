@@ -105,7 +105,7 @@
         "show_tags_on_mobile": true,
         "enable_actions_bar": true,
         "horizontal_alignment": "text-left",
-        "section_width": "full",
+        "section_width": "fluid",
         "color_scheme": "scheme-1",
         "spacing_top": "0",
         "spacing_bottom": "0",
