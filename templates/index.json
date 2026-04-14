@@ -50,58 +50,6 @@
         "slider_color_scheme": "scheme-6"
       }
     },
-    "90e984e6-6e27-4581-ad90-2ced240882b7": {
-      "type": "full-width-banner",
-      "blocks": {
-        "template--18086433161531__90e984e6-6e27-4581-ad90-2ced240882b7-16771528305845bf22-0": {
-          "type": "subtitle",
-          "settings": {
-            "subtitle": "LUXURY SWIMWEAR CREATED WITH CARE",
-            "subtitle_url": ""
-          }
-        },
-        "template--18086433161531__90e984e6-6e27-4581-ad90-2ced240882b7-16771528305845bf22-1": {
-          "type": "title",
-          "settings": {
-            "title": "Spring/Summer 2025"
-          }
-        },
-        "template--18086433161531__90e984e6-6e27-4581-ad90-2ced240882b7-16771528305845bf22-2": {
-          "type": "buttons",
-          "settings": {
-            "first_button_text": "Shop new in",
-            "first_button_url": "",
-            "first_button_style": "button--outlined",
-            "second_button_text": "Shop all swimwear",
-            "second_button_url": "",
-            "second_button_style": "button--outlined"
-          }
-        }
-      },
-      "block_order": [
-        "template--18086433161531__90e984e6-6e27-4581-ad90-2ced240882b7-16771528305845bf22-0",
-        "template--18086433161531__90e984e6-6e27-4581-ad90-2ced240882b7-16771528305845bf22-1",
-        "template--18086433161531__90e984e6-6e27-4581-ad90-2ced240882b7-16771528305845bf22-2"
-      ],
-      "settings": {
-        "enable_transparent_header": false,
-        "full_width_banner_height": 80,
-        "full_width_banner_mobile_height": 75,
-        "banner_layout": "section-full-width-banner--full",
-        "video_desktop_external": "",
-        "video_mobile_external": "",
-        "content_position_horizontal": "align-center text-center",
-        "content_position_vertical": "justify-center",
-        "content_padding_top": 9.6,
-        "content_padding_bottom": 9.6,
-        "content_padding_left": 32,
-        "content_padding_right": 32,
-        "color_scheme": "scheme-6",
-        "spacing_top": "2",
-        "spacing_bottom": "2",
-        "section_border": "none"
-      }
-    },
     "shoppable_hYqxPy": {
       "type": "shoppable",
       "blocks": {
@@ -299,6 +247,15 @@
     "1658994245757c7b20": {
       "type": "featured-products",
       "blocks": {
+        "collection_mYMTLa": {
+          "type": "collection",
+          "settings": {
+            "products": [],
+            "collection": "all-products",
+            "title": "",
+            "show_unavailable_products": false
+          }
+        },
         "8d8dee3c-2bdb-429e-9a6c-e5af884f102b": {
           "type": "collection",
           "settings": {
@@ -310,6 +267,7 @@
         }
       },
       "block_order": [
+        "collection_mYMTLa",
         "8d8dee3c-2bdb-429e-9a6c-e5af884f102b"
       ],
       "settings": {
@@ -1300,7 +1258,6 @@
   },
   "order": [
     "1658995208ad05f95f",
-    "90e984e6-6e27-4581-ad90-2ced240882b7",
     "shoppable_hYqxPy",
     "1658994245757c7b20",
     "dual_tiles_JrE6mY",
