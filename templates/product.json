@@ -106,8 +106,8 @@
       "settings": {
         "product_media_layout": "product__media-layout--full",
         "slides_with_thumbs": "desktop_and_mobile",
-        "product_media_object_fit": "cover",
-        "thumb_media_object_fit": "contain",
+        "product_media_object_fit": "contain",
+        "thumb_media_object_fit": "cover",
         "media_aspect_ratio": "default",
         "adaptive_ratio_and_auto_height": "default",
         "slider_background_color_transparent": true,
