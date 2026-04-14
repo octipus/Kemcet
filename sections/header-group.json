@@ -138,82 +138,10 @@
             "card_button_text": "",
             "card_button_url": ""
           }
-        },
-        "37cd2d1d-2b56-4ed5-93d6-934e97ab2ca2": {
-          "type": "image-link-text",
-          "settings": {
-            "color_scheme": "scheme-6",
-            "content_vertical_alignment": "center",
-            "card_title": "Heading goes here",
-            "card_link_type": "card",
-            "card_button_text": "",
-            "card_button_url": ""
-          }
-        },
-        "917863eb-72c8-40ed-8666-395f53855d53": {
-          "type": "image-link-text",
-          "settings": {
-            "color_scheme": "scheme-6",
-            "content_vertical_alignment": "center",
-            "card_title": "Heading goes here",
-            "card_link_type": "card",
-            "card_button_text": "",
-            "card_button_url": ""
-          }
-        },
-        "800069d0-d269-4231-b049-4693b3ebb223": {
-          "type": "image-link-text",
-          "settings": {
-            "color_scheme": "scheme-6",
-            "content_vertical_alignment": "center",
-            "card_title": "Heading goes here",
-            "card_link_type": "card",
-            "card_button_text": "",
-            "card_button_url": ""
-          }
-        },
-        "215b393e-0589-426c-b643-997279993a5c": {
-          "type": "image-link-text",
-          "settings": {
-            "color_scheme": "scheme-6",
-            "content_vertical_alignment": "center",
-            "card_title": "Heading goes here",
-            "card_link_type": "card",
-            "card_button_text": "",
-            "card_button_url": ""
-          }
-        },
-        "7f40f20e-7efb-4607-ace3-ba9ef73bd6e9": {
-          "type": "image-link-text",
-          "settings": {
-            "color_scheme": "scheme-6",
-            "content_vertical_alignment": "center",
-            "card_title": "Heading goes here",
-            "card_link_type": "card",
-            "card_button_text": "",
-            "card_button_url": ""
-          }
-        },
-        "e785f17a-8096-4a5d-8177-3a96491ab74d": {
-          "type": "image-link-text",
-          "settings": {
-            "color_scheme": "scheme-6",
-            "content_vertical_alignment": "center",
-            "card_title": "Heading goes here",
-            "card_link_type": "card",
-            "card_button_text": "",
-            "card_button_url": ""
-          }
         }
       },
       "block_order": [
-        "b24138db-2e60-43bf-a7d4-d853a4298828",
-        "37cd2d1d-2b56-4ed5-93d6-934e97ab2ca2",
-        "917863eb-72c8-40ed-8666-395f53855d53",
-        "800069d0-d269-4231-b049-4693b3ebb223",
-        "215b393e-0589-426c-b643-997279993a5c",
-        "7f40f20e-7efb-4607-ace3-ba9ef73bd6e9",
-        "e785f17a-8096-4a5d-8177-3a96491ab74d"
+        "b24138db-2e60-43bf-a7d4-d853a4298828"
       ],
       "settings": {
         "layout": "",
