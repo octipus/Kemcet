@@ -62,8 +62,8 @@
           "settings": {
             "column_factor": 6,
             "row_factor": 1,
-            "content_position_vertical": "justify-end",
-            "content_alignment": "align-end text-right",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
             "content_alignment_for_mobile": "align-center--mobile text-center--mobile"
           }
         }

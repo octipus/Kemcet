@@ -15,10 +15,10 @@
         "slide_DedQ6n": {
           "type": "slide",
           "settings": {
-            "banner_layout": "hero-banner--full",
+            "banner_layout": "hero-banner--30-70",
             "color_scheme": "scheme-2",
             "header_menu_text_color": "#fafafa",
-            "content_position_horizontal": "align-center text-center",
+            "content_position_horizontal": "align-end text-right",
             "content_position_vertical": "justify-end",
             "subtitle": "",
             "title": "KEM:2K26",
@@ -42,7 +42,7 @@
       "settings": {
         "enable_transparent_header": true,
         "enable_overlay_for_transparent_header": true,
-        "slider_height": "100svh",
+        "slider_height": "auto",
         "slider_height_mobile": "100svh",
         "slider_autoplay_interval": 5,
         "slider_arrows": true,
