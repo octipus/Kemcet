@@ -14,35 +14,14 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "newsletter_3gGLdr": {
-          "type": "newsletter",
-          "settings": {
-            "show_on": "mobile",
-            "column_factor": 2,
-            "row_factor": 1,
-            "heading": "Sign up to receive 10% off your first order & exclusive product launches, and unique experiences.",
-            "heading_size": "h5",
-            "newsletter_content": ""
-          }
-        },
         "b7f1dbf8-fb4b-4c72-ad35-cf47b087fc1f": {
           "type": "menu",
           "settings": {
             "column_factor": 1,
             "row_factor": 1,
-            "title": "Company",
+            "title": "Get Help",
             "heading_size": "h5",
             "menu": "footer"
-          }
-        },
-        "ba2e09f9-38b3-4ed6-93ae-c2cd3420c2c0": {
-          "type": "menu",
-          "settings": {
-            "column_factor": 1,
-            "row_factor": 1,
-            "title": "Get help",
-            "heading_size": "h5",
-            "menu": ""
           }
         },
         "0de49fd3-060f-40bc-baeb-cf0131bae43e": {
@@ -75,7 +54,7 @@
             "row_factor": 1,
             "heading": "Sign up to receive 10% off your first order & exclusive product launches, and unique experiences.",
             "heading_size": "h5",
-            "newsletter_content": "Newsletter content goes here"
+            "newsletter_content": ""
           }
         },
         "country_selector_T64N6h": {
@@ -90,9 +69,7 @@
         }
       },
       "block_order": [
-        "newsletter_3gGLdr",
         "b7f1dbf8-fb4b-4c72-ad35-cf47b087fc1f",
-        "ba2e09f9-38b3-4ed6-93ae-c2cd3420c2c0",
         "0de49fd3-060f-40bc-baeb-cf0131bae43e",
         "762130ce-c112-474e-ab41-0e908f95e578",
         "newsletter_CG9jrr",
