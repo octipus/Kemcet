@@ -119,6 +119,25 @@
           "placeholder": "#f5ebdf",
           "shadow": "#111111"
         }
+      },
+      "scheme-19e5b792-2871-473e-bf5c-c7e1d1513af8": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "primary_text": "#ffffff",
+          "secondary_text": "#e6e2e1",
+          "heading_text": "#ffffff",
+          "filled_button": "#111111",
+          "filled_button_label": "#ffffff",
+          "outlined_button_label": "#111111",
+          "link": "#111111",
+          "border": "#e6e2e1",
+          "tag": "#111111",
+          "tag_label": "#ffffff",
+          "progress_bar": "#cd9b77",
+          "placeholder": "#f5ebdf",
+          "shadow": "#111111"
+        }
       }
     }
   },
