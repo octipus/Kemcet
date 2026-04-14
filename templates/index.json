@@ -106,17 +106,17 @@
         "slide_ANKANy": {
           "type": "slide",
           "settings": {
-            "product": "",
-            "dot_position_horizontal": 50,
-            "dot_position_vertical": 50
+            "product": "open-hem-jogger-grey-marl",
+            "dot_position_horizontal": 27,
+            "dot_position_vertical": 94
           }
         },
         "slide_ndmjdE": {
           "type": "slide",
           "settings": {
-            "product": "",
-            "dot_position_horizontal": 75,
-            "dot_position_vertical": 75
+            "product": "hoodie-black",
+            "dot_position_horizontal": 69,
+            "dot_position_vertical": 47
           }
         }
       },
