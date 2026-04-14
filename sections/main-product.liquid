@@ -272,8 +272,23 @@
 
             {%- for block in section.blocks -%}
               {%- case block.type -%}
-                {%- when 'title' -%}
-                  <h1 class="h2 product__title" {{ block.shopify_attributes }}>{{- product.title | escape -}}</h1>
+              {%  when 'title' %}
+                <h1 class="h2 product__title" {{ block.shopify_attributes }}>
+                  {{- product.title | split: '-' | first | escape -}}
+                </h1>
+                {% if block.settings.show_variant_colour or block.settings.show_product_subtitle %}
+                  <h5 class="product__subtitle color-subdued" {{ block.shopify_attributes }}>
+                    {% if block.settings.show_variant_colour %}
+                      {{- product.title | split: '-' | last | escape -}}
+                    {% endif %}
+                    {% if block.settings.show_variant_colour and block.settings.show_product_subtitle and  product.metafields.custom.complete_product.value.product_subtitle != blank %}
+                      <span> ● </span>
+                    {% endif %}
+                    {% if block.settings.show_product_subtitle %}
+                      {{- product.metafields.custom.complete_product.value.product_subtitle -}}
+                    {% endif %}
+                  </h5>
+                {% endif %}
                 {%- when 'text' -%}
                   <p
                     class="product__text product__text--{{- block.settings.text_style }} caption caption--small"
@@ -1166,7 +1181,21 @@
     {
       "type": "title",
       "name": "t:sections.main-product.blocks.title.name",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_variant_colour",
+          "label": "Show Variant Colour",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_product_subtitle",
+          "label": "Show Product Subtitle",
+          "default": true
+        }
+      ]
     },
     {
       "type": "description",

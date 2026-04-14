@@ -58,7 +58,7 @@
 }
 
 .color-subdued {
-  color: var(--color-subdued);
+  color: rgba(var(--color-subdued), .6);
 }
 
 .color-headings {

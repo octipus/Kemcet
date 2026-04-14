@@ -489,7 +489,11 @@
 }
 
 .product__content > *:not(product-sticky-atc) {
-  margin-block-end: 1.2rem;
+  margin-block-end: 1rem;
+}
+
+.product__content > .product__title {
+  margin-block-end: 0;
 }
 
 .product__content.justify-center > * {
@@ -556,7 +560,11 @@
 }
 .product__title {
   justify-content: flex-start;
-  margin-block: 1.6rem 1.3rem;
+  margin-block: 1.6rem 0rem;
+}
+
+.product__subtitle {
+  margin-block: 0;
 }
 
 @media screen and (max-width: 990px) {
