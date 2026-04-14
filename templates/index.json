@@ -91,10 +91,61 @@
         "spacing_bottom": "2",
         "section_border": "none"
       }
+    },
+    "shop_the_look_gK364C": {
+      "type": "shop-the-look",
+      "blocks": {
+        "slide_WqVdCY": {
+          "type": "slide",
+          "settings": {
+            "product": "hoodie-zip-through-grey-marl",
+            "dot_position_horizontal": 9,
+            "dot_position_vertical": 54
+          }
+        },
+        "slide_ANKANy": {
+          "type": "slide",
+          "settings": {
+            "product": "",
+            "dot_position_horizontal": 50,
+            "dot_position_vertical": 50
+          }
+        },
+        "slide_ndmjdE": {
+          "type": "slide",
+          "settings": {
+            "product": "",
+            "dot_position_horizontal": 75,
+            "dot_position_vertical": 75
+          }
+        }
+      },
+      "block_order": [
+        "slide_WqVdCY",
+        "slide_ANKANy",
+        "slide_ndmjdE"
+      ],
+      "name": "t:sections.shop-the-look.name",
+      "settings": {
+        "title": "Essentials",
+        "heading_size": "h2",
+        "image_desktop": "shopify://shop_images/KEM_12396.jpg",
+        "aspect_ratio": "auto",
+        "aspect_ratio_mobile": "auto",
+        "reverse_positions": false,
+        "show_dots": true,
+        "color_scheme_dots": "",
+        "section_width": "page",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2",
+        "section_border": "none"
+      }
     }
   },
   "order": [
     "1658995208ad05f95f",
-    "featured_products_qYUAtm"
+    "featured_products_qYUAtm",
+    "shop_the_look_gK364C"
   ]
 }
