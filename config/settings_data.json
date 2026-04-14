@@ -103,21 +103,21 @@
       },
       "scheme-2": {
         "settings": {
-          "background": "#333333",
+          "background": "#121212",
           "background_gradient": "",
-          "primary_text": "#ffffff",
-          "secondary_text": "#333333",
-          "heading_text": "#ffffff",
-          "filled_button": "#ffffff",
-          "filled_button_label": "#333333",
-          "outlined_button_label": "#ffffff",
+          "primary_text": "#fafafa",
+          "secondary_text": "#121212",
+          "heading_text": "#fafafa",
+          "filled_button": "#fafafa",
+          "filled_button_label": "#121212",
+          "outlined_button_label": "#fafafa",
           "link": "#ffffff",
           "border": "#e6e2e1",
           "tag": "#ffffff",
-          "tag_label": "#333333",
+          "tag_label": "#121212",
           "progress_bar": "#cd9b77",
           "placeholder": "#f5ebdf",
-          "shadow": "#111111"
+          "shadow": "#121212"
         }
       },
       "scheme-19e5b792-2871-473e-bf5c-c7e1d1513af8": {
