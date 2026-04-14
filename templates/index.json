@@ -50,33 +50,42 @@
         "slider_color_scheme": "scheme-6"
       }
     },
-    "callout_banner_wP8CmX": {
-      "type": "callout-banner",
-      "name": "t:sections.callout-banner.name",
+    "featured_products_qYUAtm": {
+      "type": "featured-products",
+      "blocks": {
+        "collection_cxpDnq": {
+          "type": "collection",
+          "settings": {
+            "products": [],
+            "collection": "tops",
+            "title": "",
+            "show_unavailable_products": false
+          }
+        },
+        "collection_9YQCcY": {
+          "type": "collection",
+          "settings": {
+            "products": [],
+            "collection": "bottoms",
+            "title": "",
+            "show_unavailable_products": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_cxpDnq",
+        "collection_9YQCcY"
+      ],
+      "name": "t:sections.featured-products.name",
       "settings": {
-        "layout": "image_none",
-        "heading": "",
+        "layout": "layout-1",
+        "heading": "Heading for Featured Products",
         "heading_size": "h2",
-        "text": "",
-        "action_preference": "button",
-        "button_text": "",
+        "button_text": "View all",
         "button_url": "",
         "button_style": "button--filled",
-        "newsletter_button_label": "Submit",
-        "newsletter_success_message": "Thanks for signing up!",
-        "timer_year": 2026,
-        "timer_month": "04",
-        "timer_day": 23,
-        "timer_hour": 10,
-        "timer_minute": 0,
-        "timer_extend": 0,
-        "timer_end_message": "Sale has ended",
-        "show_borders": false,
-        "show_timer_days": true,
-        "show_timer_hours": true,
-        "show_timer_minutes": true,
-        "show_timer_seconds": true,
-        "section_width": "fluid",
+        "max_products": 8,
+        "section_width": "page",
         "color_scheme": "",
         "spacing_top": "2",
         "spacing_bottom": "2",
@@ -86,6 +95,6 @@
   },
   "order": [
     "1658995208ad05f95f",
-    "callout_banner_wP8CmX"
+    "featured_products_qYUAtm"
   ]
 }
