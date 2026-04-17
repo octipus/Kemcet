@@ -1104,5 +1104,15 @@
         "default": 94
       }
     ]
+  },
+  {
+    "name": "API Keys",
+    "settings": [
+      {
+        "type": "text",
+        "id": "klaviyo_api_key",
+        "label": "Klaviyo API Key"
+      }
+    ]
   }
 ]
