@@ -289,33 +289,13 @@
                     {% endif %}
                   </h5>
                 {% endif %}
-                {%- when 'text' -%}
-                  <p
-                    class="product__text product__text--{{- block.settings.text_style }} caption caption--small"
-                    {{ block.shopify_attributes }}
-                  >
-                    {%- liquid
-                      if block.settings.link_to_resource == 'type'
-                        if product.type != blank
-                          echo product.type | link_to_type: class: 'link'
-                        endif
-                      elsif block.settings.link_to_resource == 'vendor'
-                        echo product.vendor | link_to_vendor: class: 'link'
-                      else
-                        if block.settings.text_style != 'link'
-                          render 'icon', icon_name: 'theme-check'
-                        endif
-                        echo block.settings.text
-                      endif
-                    -%}
-                  </p>
                 {%- when 'sibling_products' -%}
                   {%- render 'product-sibling-products', product: product, block: block -%}
 
                 {%- when 'text' -%}
                   {% if block.settings.text != blank %}
                     <p
-                      class="product__text product__text--{{- block.settings.text_style }} caption caption--small {% if block.settings.enable_animation == true %}product__text_animation{% endif %}"
+                      class="product__text product__text--{{- block.settings.text_style }} caption caption--small"
                       {{ block.shopify_attributes }}
                     >
                       {%- liquid
@@ -327,11 +307,11 @@
                           echo product.vendor | link_to_vendor: class: 'link'
                         else
                           if block.settings.text_style != 'link'
-                            if block.settings.icon_type != 'none'
+                            if block.settings.icon_type != 'none' and block.settings.icon_type != blank
                               if block.settings.icon_type == 'icon-check'
-                                render 'icon-check'
+                                render 'icon', icon_name: 'theme-check'
                               elsif block.settings.icon_type == 'icon-discount'
-                                render 'icon-discount'
+                                render 'icon', icon_name: 'option-price_tag'
                               endif
                             endif
                           endif
@@ -1298,6 +1278,27 @@
             {
               "value": "vendor",
               "label": "t:sections.main-product.blocks.text.settings.link_to_resource.options.vendor.label"
+            }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "select",
+          "id": "icon_type",
+          "label": "t:sections.main-product.blocks.text.settings.icon_type.label",
+          "info": "t:sections.main-product.blocks.text.settings.icon_type.info",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.main-product.blocks.text.settings.icon_type.options.none.label"
+            },
+            {
+              "value": "icon-check",
+              "label": "t:sections.main-product.blocks.text.settings.icon_type.options.check.label"
+            },
+            {
+              "value": "icon-discount",
+              "label": "t:sections.main-product.blocks.text.settings.icon_type.options.discount.label"
             }
           ],
           "default": "none"

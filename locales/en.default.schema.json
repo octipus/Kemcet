@@ -4131,6 +4131,24 @@
                   "label": "Vendor"
                 }
               }
+            },
+            "icon_type": {
+              "label": "Icon",
+              "info": "Shown before the text when Text style is Body. Not used for link-style text.",
+              "options": {
+                "none": {
+                  "label": "None"
+                },
+                "check": {
+                  "label": "Check"
+                },
+                "discount": {
+                  "label": "Tag / discount"
+                }
+              }
+            },
+            "enable_animation": {
+              "label": "Enable text animation"
             }
           }
         },
