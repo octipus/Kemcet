@@ -197,6 +197,7 @@
     },
     "rich_text_faBQmp": {
       "type": "rich-text",
+      "disabled": true,
       "name": "t:sections.rich-text.name",
       "settings": {
         "layout": "normal",
@@ -272,6 +273,7 @@
         "template--21612848644411__e6e5aec1-6328-407a-96dd-0a0f25526084-tile-1",
         "template--21612848644411__e6e5aec1-6328-407a-96dd-0a0f25526084-tile-2"
       ],
+      "disabled": true,
       "settings": {
         "block_size": "half",
         "gap_between_tiles": "2",
@@ -428,6 +430,7 @@
         "shoppable_social_item_iTgeb6",
         "shoppable_social_item_MpMjXM"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme_drawer": "scheme-1",
         "layout": "slider",
@@ -639,6 +642,7 @@
         "template--16970185015611__9300885a-af7b-4282-8264-9bc331f64217-1670504447805a1f6b-1",
         "template--16970185015611__9300885a-af7b-4282-8264-9bc331f64217-1670504447805a1f6b-2"
       ],
+      "disabled": true,
       "settings": {
         "title": "Frequently asked questions",
         "heading_size": "h2",
@@ -682,6 +686,7 @@
         "template--18086433587515__c3105354-88c9-4d8c-930f-658e65ce65b5-1677166450d28d99e1-1",
         "template--18086433587515__c3105354-88c9-4d8c-930f-658e65ce65b5-1677166450d28d99e1-2"
       ],
+      "disabled": true,
       "settings": {
         "enable_transparent_header": false,
         "full_width_banner_height": 80,
@@ -743,6 +748,7 @@
         "template--17709035520315__aa404fbc-0296-4f69-b8d8-a06a104ebc2b-16749119417dc0d162-2",
         "ebcca1d3-211f-4331-aef2-c4048ba019e8"
       ],
+      "disabled": true,
       "settings": {
         "title": "Shop The Look",
         "heading_size": "h2",
@@ -760,6 +766,7 @@
     },
     "recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "layout": "layout-1",
         "heading": "You may also like",
@@ -779,10 +786,12 @@
     },
     "166904322806a89075": {
       "type": "apps",
+      "disabled": true,
       "settings": {}
     },
     "recently_viewed": {
       "type": "recently-viewed-products",
+      "disabled": true,
       "settings": {
         "layout": "layout-1",
         "heading": "Recently Viewed",
@@ -841,6 +850,7 @@
         "template--17423162900795__e86737b7-1cc0-43fc-8537-509199f13681-1673866949c520be61-1",
         "template--17423162900795__e86737b7-1cc0-43fc-8537-509199f13681-1673866949c520be61-2"
       ],
+      "disabled": true,
       "settings": {
         "layout": "vertical",
         "spacing_inner": "6",
