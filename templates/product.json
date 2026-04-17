@@ -66,7 +66,8 @@
           "settings": {
             "text": "Free delivery and shipping",
             "text_style": "body",
-            "link_to_resource": "none"
+            "link_to_resource": "none",
+            "icon_type": "icon-check"
           }
         },
         "1ad0121e-439d-45c0-b45d-4f080836ade5": {
@@ -74,19 +75,17 @@
           "settings": {
             "text": "Secure online payment",
             "text_style": "body",
-            "link_to_resource": "none"
+            "link_to_resource": "none",
+            "icon_type": "icon-check"
           }
-        },
-        "7be6b89c-da83-4ff2-9b85-44fb28cbfa27": {
-          "type": "pickup-availability",
-          "settings": {}
         },
         "text_Mg9qWi": {
           "type": "text",
           "settings": {
             "text": "{{ product.metafields.custom.fabric_composition.value }}",
             "text_style": "body",
-            "link_to_resource": "none"
+            "link_to_resource": "none",
+            "icon_type": "icon-check"
           }
         }
       },
@@ -100,7 +99,6 @@
         "e6d841d6-2f71-40b3-956a-912df13f9f6e",
         "b2dabe12-2158-4ba6-bc54-9baae453acf5",
         "1ad0121e-439d-45c0-b45d-4f080836ade5",
-        "7be6b89c-da83-4ff2-9b85-44fb28cbfa27",
         "text_Mg9qWi"
       ],
       "settings": {
