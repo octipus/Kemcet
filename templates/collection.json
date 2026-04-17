@@ -46,7 +46,7 @@
         "enable_products_count": true,
         "products_per_row_ui": true,
         "enable_sorting": true,
-        "filters_style": "drawer",
+        "filters_style": "sidebar",
         "sidebar_navigation": "",
         "products_per_page": 14,
         "products_per_row_default": "4",
