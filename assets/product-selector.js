@@ -29,6 +29,18 @@ class ProductSelector extends HTMLElement {
     this.createDropdownFromButtons();
 
     this.enableDropdownStyle();
+
+    this.emitVariantChange();
+  }
+
+  emitVariantChange() {
+    this.dispatchEvent(
+      new CustomEvent('variant:change', {
+        bubbles: true,
+        composed: true,
+        detail: { variant: this.currentVariant }
+      })
+    );
   }
 
   updateVariantStatuses() {
@@ -103,38 +115,43 @@ class ProductSelector extends HTMLElement {
       });
 
     if (event.target.type === 'number') return;
-    this.updateOptions();
-    if (this.currentVariant === this.getVariantData()) return;
 
-    this.updateVariant();
-    // this.updateVariantStatuses();
-    this.productBarUpdateOptions();
-    this.updatePickupAvailability();
-    if (this.form) {
-      // this.form.removeAttribute('data-has-selling-plan'); // removing this is causing issue for selling plans
-      this.form.toggleAddButton(false, '');
-      this.form.handleErrorMessage();
-    }
+    try {
+      this.updateOptions();
+      if (this.currentVariant === this.getVariantData()) return;
 
-    if (!this.currentVariant) {
+      this.updateVariant();
+      // this.updateVariantStatuses();
+      this.productBarUpdateOptions();
+      this.updatePickupAvailability();
       if (this.form) {
-        this.form.toggleAddButton(true, '');
+        // this.form.removeAttribute('data-has-selling-plan'); // removing this is causing issue for selling plans
+        this.form.toggleAddButton(false, '');
+        this.form.handleErrorMessage();
       }
-      this.setUnavailable();
 
-      return;
-    }
+      if (!this.currentVariant) {
+        if (this.form) {
+          this.form.toggleAddButton(true, '');
+        }
+        this.setUnavailable();
 
-    if (!this.currentVariant.available) {
-      if (this.form) {
-        this.form.toggleAddButton(true, window.theme.strings.soldOut);
+        return;
       }
-    }
 
-    this.updateMedia();
-    this.updateURL();
-    this.updateVariantInput();
-    this.renderProductInfo();
+      if (!this.currentVariant.available) {
+        if (this.form) {
+          this.form.toggleAddButton(true, window.theme.strings.soldOut);
+        }
+      }
+
+      this.updateMedia();
+      this.updateURL();
+      this.updateVariantInput();
+      this.renderProductInfo();
+    } finally {
+      this.emitVariantChange();
+    }
   }
 
   updateOptions() {
@@ -292,12 +309,14 @@ class ProductSelector extends HTMLElement {
   }
 
   updateVariantInput() {
+    const cartForm = this.form?.querySelector?.('form[action*="/cart/add"]');
     const inputs = [
-      this.querySelector('[name="id"]'),
-      this.installmentsForm?.querySelector('[name="id"]')
-    ];
+      cartForm?.querySelector('input[name="id"]'),
+      this.querySelector('input[name="id"]'),
+      this.installmentsForm?.querySelector('input[name="id"]')
+    ].filter(Boolean);
+
     inputs.forEach(input => {
-      if (!input) return;
       input.value = this.currentVariant.id;
       input.dispatchEvent(new Event('change', { bubbles: true }));
     });

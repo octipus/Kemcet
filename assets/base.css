@@ -1,4 +1,9 @@
 /* Sahara Theme - v3.0.0 */
+
+@view-transition {
+  navigation: auto;
+}
+
 .button--filled {
   --color-button-text: rgb(var(--color-filled-button-label));
   --color-button-background: rgb(var(--color-filled-button));

@@ -9,7 +9,7 @@
     {% if product.requires_selling_plan %}data-product-requires-selling-plan{% endif %}
     {{ block.shopify_attributes }}
   >
-    <input type="hidden" name="id" value="{{- current_variant.id -}}" form="{{ product_form_id }}">
+    {%- comment -%} Variant id lives in the main cart form (buy_buttons) so Klaviyo/onsite.js and form.querySelector find it. {%- endcomment -%}
     {%- liquid
       assign variants_available_arr = product.variants | map: 'available'
       assign variants_option_one_arr = product.variants | map: 'option1'

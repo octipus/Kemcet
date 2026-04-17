@@ -475,11 +475,12 @@
                         {%- render 'quantity-input', product_ref: product, hide_label: true -%}
                       </div>
 
-                      {% assign variant_picker_block = section.blocks | where: 'type', 'variant_picker' %}
-
-                      {%- if product.has_only_default_variant or variant_picker_block.size == 0 -%}
-                        <input type="hidden" name="id" value="{{- product.selected_or_first_available_variant.id -}}">
-                      {%- endif -%}
+                      <input
+                        type="hidden"
+                        name="id"
+                        value="{{- product.selected_or_first_available_variant.id -}}"
+                        data-product-variant-id
+                      >
 
                       {%- liquid
                         assign value = 'products.product.sold_out' | t
@@ -500,6 +501,16 @@
                         assign no_js_value = 'products.product.add_to_cart' | t
                         render 'button', type: 'submit', name: 'add', style: button_style, value: no_js_value, class: 'button product-selector__submit no-js'
                       -%}
+                      {%- if settings.klaviyo_api_key != blank -%}
+                        <button
+                          type="button"
+                          class="button klaviyo-bis-trigger button--filled button--uppercase"
+                          style="display: none;"
+                          aria-hidden="true"
+                        >
+                          Notify Me When Available
+                        </button>
+                      {%- endif -%}
 
                       <p class="color-alert hidden" data-error-wrapper></p>
 
@@ -892,6 +903,10 @@
 <script type="application/ld+json">
   {{ product | structured_data }}
 </script>
+
+{%- if settings.klaviyo_api_key != blank -%}
+  {%- render 'klaviyo-back-in-stock' -%}
+{%- endif -%}
 
 {% schema %}
 {

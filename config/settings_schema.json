@@ -1106,12 +1106,30 @@
     ]
   },
   {
-    "name": "API Keys",
+    "name": "Klavyio Back in Stock",
     "settings": [
       {
         "type": "text",
         "id": "klaviyo_api_key",
         "label": "Klaviyo API Key"
+      },
+      {
+        "type": "text",
+        "id": "bis_button_text",
+        "label": "Back in Stock Button Text",
+        "default": "Notify Me When Available"
+      },
+      {
+        "type": "text",
+        "id": "bis_body_content",
+        "label": "Back in Stock Body Content",
+        "default": "Register to receive a notification when this item comes back in stock."
+      },
+      {
+        "type": "text",
+        "id": "bis_success_message",
+        "label": "Back in Stock Success Message",
+        "default": "You're in! We'll let you know when it's back."
       }
     ]
   }
