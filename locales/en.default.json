@@ -568,5 +568,19 @@
     "announcement_bar": {
       "show_announcements": "Show announcements"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "stock": {
+        "title": "Coming Soon"
+      }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "out_of_stock": "Coming Soon"
+        }
+      }
+    }
   }
 }
