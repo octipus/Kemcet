@@ -441,13 +441,32 @@
   <a href="{{- product_ref.url -}}" class="card-product__content focus-inset" role="button">
     <h5 class="card-product__title">
       {%- if product_ref and product_ref != empty -%}
-        {{- product_ref.title | escape -}}
+        <span class="card-product__title-text">{{- product_ref.title | split: '-' | first | escape -}}</span>
+        <div class="card-product__swatch-color-container">
+        {% for variant in product_ref.metafields.custom.complete_product.value.product_list.value %}
+          {% for color in variant.metafields.shopify.color-pattern.value limit: 1 %}
+            {% comment %} {{color | json }} {% endcomment %}
+              <span
+                class="card-product__swatch-color"
+                data-color-label="{{ color.label | escape }}"
+                style="background-color: {{ color.color }}; display: inline-block; width: 20px; height: 20px;"
+              ></span>
+          {% endfor %}
+        {% endfor %}
+        </div>
       {%- else -%}
         {{- 'products.product.title' | t -}}
-
       {%- endif -%}
     </h5>
-    {%- render 'price', product_ref: product_ref, price_class: 'card-product__price' -%}
+    
+    <div class="card-product__title-color-container">
+      {%- render 'price', product_ref: product_ref, price_class: 'card-product__price' -%}
+      <span class="card-product__title-text h6 mobile-hide js-card-product-color-label">
+        {% for color in product_ref.metafields.shopify.color-pattern.value limit: 1 %}
+          {{- color.label -}}
+        {% endfor %}
+      </span>
+    </div>
   </a>
 
   {%- if settings.show_product_groups == 'both' or settings.show_product_groups == 'card' -%}

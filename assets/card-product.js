@@ -276,6 +276,51 @@ if (!customElements.get('card-product')) {
           updateAvailableSizes();
         });
       }
+
+      this.initColorSwatchLabelPreview();
+    }
+
+    initColorSwatchLabelPreview() {
+      const swatchColorContainer = this.querySelector(
+        '.card-product__swatch-color-container'
+      );
+      const colorLabelEl = this.querySelector('.js-card-product-color-label');
+
+      if (!swatchColorContainer || !colorLabelEl) {
+        return;
+      }
+
+      const swatches = swatchColorContainer.querySelectorAll(
+        '.card-product__swatch-color'
+      );
+
+      if (!swatches.length) {
+        return;
+      }
+
+      const defaultLabel = colorLabelEl.textContent.trim();
+
+      swatchColorContainer.addEventListener('mouseover', e => {
+        const swatch = e.target.closest('.card-product__swatch-color');
+
+        if (!swatch || !swatchColorContainer.contains(swatch)) {
+          return;
+        }
+
+        const label = swatch.dataset.colorLabel;
+
+        if (label != null && label !== '') {
+          colorLabelEl.textContent = label;
+        }
+      });
+
+      swatchColorContainer.addEventListener('mouseout', e => {
+        if (swatchColorContainer.contains(e.relatedTarget)) {
+          return;
+        }
+
+        colorLabelEl.textContent = defaultLabel;
+      });
     }
 
     async getProduct() {

@@ -335,13 +335,15 @@ input:disabled + .card-product__swatch {
 
 .card-product__content {
   display: block;
-  text-align: center;
-  padding: 1.2rem .8rem 0;
+  /* text-align: center; */
+  padding: .8rem 0;
 }
 
 .card-product__title {
   margin: 0 0 .8rem;
-  font-size: calc(var(--font-heading-scale) * var(--font-size-h6));
+  font-size: calc(var(--font-heading-scale) * var(--font-size-h5));
+  display: flex;
+  justify-content: space-between;
 }
 
 .card-product:hover .card-product__sizes.is-active {
