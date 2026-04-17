@@ -47,6 +47,7 @@
     "enable_cart_upsell": true,
     "cart_upsell_title": "Complete the set",
     "disable_animations_on_mobile": true,
+    "klaviyo_api_key": "T7frmK",
     "enable_cart_notes": true,
     "sections": {
       "main-password-header": {
