@@ -40,7 +40,7 @@
     "view": "View"
   },
   "info": {
-    "sold_out": "Sold out",
+    "sold_out": "Coming Soon",
     "unavailable": "Unavailable"
   },
   "form": {
@@ -484,7 +484,7 @@
       "add_to_cart": "Add to cart",
       "add_subscription_to_cart": "Add subscription to cart",
       "choose_options": "Choose options",
-      "sold_out": "Sold out",
+      "sold_out": "Coming Soon",
       "unavailable": "Unavailable",
       "loading": "Loading...",
       "from_price_per": "from {{ price }}/each",
@@ -513,7 +513,7 @@
       },
       "show_full_product": "Shop Full Product",
       "badges": {
-        "sold_out": "Sold out",
+        "sold_out": "Coming Soon",
         "unavailable": "Unavailable",
         "new": "New",
         "sale": "Sale"
@@ -567,6 +567,18 @@
   "sections": {
     "announcement_bar": {
       "show_announcements": "Show announcements"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "stock": {
+        "sold_out_label": "Coming Soon"
+      },
+      "throttle": {
+        "merchandise": {
+          "sold_out": "Coming Soon"
+        }
+      }
     }
   }
 }
