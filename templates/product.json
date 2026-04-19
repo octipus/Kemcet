@@ -787,11 +787,6 @@
         "section_border": "none"
       }
     },
-    "166904322806a89075": {
-      "type": "apps",
-      "disabled": true,
-      "settings": {}
-    },
     "recently_viewed": {
       "type": "recently-viewed-products",
       "disabled": true,
@@ -895,7 +890,6 @@
     "c3105354-88c9-4d8c-930f-658e65ce65b5",
     "aa404fbc-0296-4f69-b8d8-a06a104ebc2b",
     "recommendations",
-    "166904322806a89075",
     "recently_viewed",
     "e86737b7-1cc0-43fc-8537-509199f13681",
     "17766005176aa16053"
