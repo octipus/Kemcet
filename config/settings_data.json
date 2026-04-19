@@ -102,7 +102,7 @@
           "border": "#e6e2e1",
           "tag": "#111111",
           "tag_label": "#ffffff",
-          "progress_bar": "#cd9b77",
+          "progress_bar": "#309956",
           "placeholder": "#f5ebdf",
           "shadow": "#111111"
         }
@@ -121,7 +121,7 @@
           "border": "#e6e2e1",
           "tag": "#ffffff",
           "tag_label": "#121212",
-          "progress_bar": "#cd9b77",
+          "progress_bar": "#309956",
           "placeholder": "#f5ebdf",
           "shadow": "#121212"
         }
@@ -140,7 +140,7 @@
           "border": "#e6e2e1",
           "tag": "#111111",
           "tag_label": "#ffffff",
-          "progress_bar": "#cd9b77",
+          "progress_bar": "#309956",
           "placeholder": "#f5ebdf",
           "shadow": "#111111"
         }
