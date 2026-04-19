@@ -55,6 +55,7 @@
       "blocks": {
         "collection_cxpDnq": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "products": [],
             "collection": "tops",
@@ -64,17 +65,28 @@
         },
         "collection_9YQCcY": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "products": [],
             "collection": "bottoms",
             "title": "",
             "show_unavailable_products": true
           }
+        },
+        "collection_EY4aFm": {
+          "type": "collection",
+          "settings": {
+            "products": [],
+            "collection": "t-shirts",
+            "title": "",
+            "show_unavailable_products": false
+          }
         }
       },
       "block_order": [
         "collection_cxpDnq",
-        "collection_9YQCcY"
+        "collection_9YQCcY",
+        "collection_EY4aFm"
       ],
       "name": "t:sections.featured-products.name",
       "settings": {
