@@ -875,7 +875,9 @@
       "block_order": [
         "rivyo_reviews_loyalty_wc_review_section_MYM8M8"
       ],
-      "settings": {}
+      "settings": {
+        "section_width": "fluid"
+      }
     }
   },
   "order": [
