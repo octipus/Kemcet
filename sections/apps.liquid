@@ -1,7 +1,9 @@
 <div class="app-embeds">
-  {%- for block in section.blocks -%}
-    {% render block %}
-  {%- endfor -%}
+  <div class="container max-w-{{ section.settings.section_width }}">
+    {%- for block in section.blocks -%}
+      {% render block %}
+    {%- endfor -%}
+  </div>
 </div>
 
 {% schema %}
@@ -9,7 +11,31 @@
   "name": "t:sections.apps.name",
   "tag": "section",
   "settings": [
-
+    {
+      "type": "header",
+      "content": "t:global.header.settings.content",
+      "info": "t:global.header.settings.info"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "t:global.settings.section.width.label",
+      "options": [
+        {
+          "value": "page",
+          "label": "t:global.settings.section.width.options.page.label"
+        },
+        {
+          "value": "fluid",
+          "label": "t:global.settings.section.width.options.fluid.label"
+        },
+        {
+          "value": "full",
+          "label": "t:global.settings.section.width.options.full.label"
+        }
+      ],
+      "default": "page"
+    }
   ],
   "blocks": [
     {
