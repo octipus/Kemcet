@@ -3844,3 +3844,13 @@ body:has(#Country-drawer-header.menu-opening) .section--announcement-bar {
   pointer-events: auto;
 }
 /* DROPDOWN - END */
+
+
+/* RIVYIO REVIEWS - START */
+.rivyoReviewWidget {
+  font-size: 1rem !important;
+}
+
+.rivyoReviewWidget span.rivyoReviewAverage {
+  font-size: 1.2rem !important;
+}

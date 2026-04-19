@@ -336,7 +336,7 @@ input:disabled + .card-product__swatch {
 .card-product__content {
   display: block;
   /* text-align: center; */
-  padding: .8rem 0;
+  padding: 0 0 .8rem 0;
 }
 
 .card-product__title {

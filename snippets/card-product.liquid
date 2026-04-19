@@ -437,7 +437,7 @@
       {{ quick_add_to_cart_button_html }}
     {%- endunless -%}
   </div>
-
+  {% render 'rivyio-reviews' with product_ref as product %}
   <a href="{{- product_ref.url -}}" class="card-product__content focus-inset" role="button">
     <h5 class="card-product__title">
       {%- if product_ref and product_ref != empty -%}

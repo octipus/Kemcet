@@ -1,0 +1,64 @@
+{%- assign productRivyoReview = product.metafields.product_schema -%}
+  {%- assign shopRivyoReview = shop.metafields.rivyo -%}
+  {%- assign shopRivyoReviewSetting = shopRivyoReview.setting.value -%}
+  {%- assign productRivyoRating = productRivyoReview.th_ratingValue | split:'.' | default: '0' -%}
+  {%- assign rivyoRatingSplit0 = productRivyoRating[0] | times: 1 -%}
+  {%- assign rivyoRatingSplit1 = productRivyoRating[1] | default: '00' -%}
+  {%- assign rivyoRatingCeil = productRivyoReview.th_ratingValue | ceil -%}
+  {% assign hide_non_ratting_review = shopRivyoReviewSetting.hide_empty_review | times: 1 %}
+  {% assign is_empty = false %}
+  {% assign isClick = false %}
+  {% if template.name contains  'product' %}
+    {% assign isClick = true %}
+  {% endif %}
+          
+          
+  <div class="rivyoReviewWidget {% if isClick %}rivyoWidgetTrigger{% endif %}" data-rating="{{ productRivyoReview.th_ratingValue | default: '00' }}">
+    <div class="rivyoReviewIcon" style="display:flex; gap:3px; line-height: 0; flex-direction: row">
+      {%- for i in (1..5) -%}
+        {% if i <= rivyoRatingSplit0 %}
+          <div class="rivyoReviewRatingIcon">
+            {{ shopRivyoReviewSetting.rating_icon }}
+          </div>
+        {% elsif i == rivyoRatingCeil %}
+          <div class="rivyoReviewRatingIcon" >
+            <span class="rivyoReviewEmpty">
+              {{ shopRivyoReviewSetting.rating_icon }}
+            </span>
+            {%- unless rivyoRatingSplit1 == '00'-%}
+              {%- assign width_value = rivyoRatingSplit1 -%}
+              {%- if rivyoRatingSplit1.size == 1 -%}
+                {%- assign width_value = rivyoRatingSplit1 | append: '0' -%}
+              {%- endif -%}
+              <span class="rivyoReviewFill" style="width:{{ width_value }}%">
+                {{ shopRivyoReviewSetting.rating_icon }}
+              </span>
+            {%- endunless -%}
+          </div>
+        {% else %}
+          {% if hide_non_ratting_review == 0  or  rivyoRatingSplit0 != 0 %}
+            <div class="rivyoReviewRatingIcon" >
+              <span class="rivyoReviewEmpty">
+                {{ shopRivyoReviewSetting.rating_icon }}
+              </span>
+            </div>
+          {% else %}
+            {% assign is_empty = true %}
+          {% endif %}
+        {% endif %}
+      {%- endfor -%}
+    </div>
+    {% if is_empty != true %}
+      <span class="rivyoReviewAverage">
+        <span class="rivyoReviewAverageCount">
+          {{- productRivyoReview.th_ratingValue | default: 0 | round: 1 }}
+        </span>
+        <span class="reviewRateCount">
+          <span class="rivyoReviewAverageBracket">(</span>
+          <span class="ratingCount">{{- productRivyoReview.th_ratingCount | default: 0 }}</span>
+          <span class="ratingLabel"> {{ shopRivyoReview.average_review_label }}</span>
+          <span class="rivyoReviewAverageBracket">)</span>
+        </span>
+      </span>
+    {% endif %}
+  </div>
