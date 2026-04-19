@@ -80,6 +80,11 @@
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {}
+      },
+      "16789939927838974014": {
+        "type": "shopify://apps/rivyo-reviews-loyalty/blocks/app-embed/f1860e84-309f-40ca-a2df-188435a622f3",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
