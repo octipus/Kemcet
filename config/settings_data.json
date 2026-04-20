@@ -118,11 +118,11 @@
           "filled_button_label": "#121212",
           "outlined_button_label": "#fafafa",
           "link": "#ffffff",
-          "border": "#e6e2e1",
+          "border": "#f5f5f5",
           "tag": "#fafafa",
           "tag_label": "#121212",
           "progress_bar": "#309956",
-          "placeholder": "#f5ebdf",
+          "placeholder": "#f5f5f5",
           "shadow": "#121212"
         }
       },
