@@ -98,7 +98,7 @@
             "logo_svg_code": "",
             "logo_width": 160,
             "logo_width_mobile": 130,
-            "text": "",
+            "text": "<p>© [year] KEMCET - made with 🤍 by <a href=\"https://www.ocontis.studio/\" target=\"_blank\" title=\"oContis Studio - Creative Shopify Consultancy and Development\">oContis Studio</a></p>",
             "content_position_vertical": "justify-center",
             "content_alignment": "align-center text-center",
             "content_alignment_for_mobile": "align-center--mobile text-center--mobile"
@@ -113,9 +113,9 @@
             "row_factor": 3,
             "title": "",
             "heading_size": "h6",
-            "copyright": "<p>© [year] Sahara, All rights reserved. Powered by Shopify</p>",
+            "copyright": "",
             "content_position_vertical": "justify-center",
-            "content_alignment": "align-end text-right",
+            "content_alignment": "align-center text-center",
             "content_alignment_for_mobile": "align-center--mobile text-center--mobile"
           }
         },
@@ -126,7 +126,7 @@
             "column_factor": 3,
             "row_factor": 3,
             "custom_payment_types": "",
-            "override_default_payment_icons": false,
+            "override_default_payment_icons": true,
             "payment_icons_color": false,
             "content_position_vertical": "justify-start",
             "content_alignment": "align-end text-right",
