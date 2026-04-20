@@ -95,8 +95,8 @@
         "marquee_font_size": 1,
         "marquee_icon_size": 1,
         "section_width": "page",
-        "color_scheme": "",
-        "spacing_top": "1",
+        "color_scheme": "scheme-2",
+        "spacing_top": "0",
         "spacing_bottom": "1",
         "section_border": "none"
       }
