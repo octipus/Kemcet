@@ -16,9 +16,8 @@
       "blocks": {
         "text_slide_nDyLNw": {
           "type": "text-slide",
-          "disabled": true,
           "settings": {
-            "content": "<p>Welcome to our store</p>",
+            "content": "<p>Discover KEM:T-shirts</p>",
             "dropdown_cards": false,
             "color_scheme": "scheme-1",
             "card_item_1__title": "",
@@ -33,7 +32,7 @@
             "card_item_3__content": "",
             "card_item_3__button_text": "",
             "card_item_3__button_url": "",
-            "countdown": true,
+            "countdown": false,
             "timer_year": 2026,
             "timer_month": "01",
             "timer_day": 1,
@@ -46,76 +45,10 @@
             "show_timer_minutes": true,
             "show_timer_seconds": true
           }
-        },
-        "5e0cad2e-d931-416e-ac29-51a4a683ade2": {
-          "type": "text-slide",
-          "settings": {
-            "content": "<p>FREE SHIPPING ON ORDERS FROM $150</p>",
-            "dropdown_cards": false,
-            "color_scheme": "",
-            "card_item_1__title": "Test",
-            "card_item_1__content": "<p>Test</p>",
-            "card_item_1__button_text": "#",
-            "card_item_1__button_url": "",
-            "card_item_2__title": "",
-            "card_item_2__content": "",
-            "card_item_2__button_text": "",
-            "card_item_2__button_url": "",
-            "card_item_3__title": "",
-            "card_item_3__content": "",
-            "card_item_3__button_text": "",
-            "card_item_3__button_url": "",
-            "countdown": false,
-            "timer_year": 2024,
-            "timer_month": "01",
-            "timer_day": 1,
-            "timer_hour": 0,
-            "timer_minute": 0,
-            "timer_extend": 7,
-            "timer_end_message": "Sale has ended",
-            "show_timer_days": true,
-            "show_timer_hours": true,
-            "show_timer_minutes": true,
-            "show_timer_seconds": true
-          }
-        },
-        "24edc9cf-38cd-4946-a269-106e12d7d3ef": {
-          "type": "text-slide",
-          "settings": {
-            "content": "<p>DISCOVER SAHARA SS25</p>",
-            "dropdown_cards": false,
-            "color_scheme": "",
-            "card_item_1__title": "Test",
-            "card_item_1__content": "<p>Test</p>",
-            "card_item_1__button_text": "",
-            "card_item_1__button_url": "",
-            "card_item_2__title": "",
-            "card_item_2__content": "",
-            "card_item_2__button_text": "",
-            "card_item_2__button_url": "",
-            "card_item_3__title": "",
-            "card_item_3__content": "",
-            "card_item_3__button_text": "",
-            "card_item_3__button_url": "",
-            "countdown": false,
-            "timer_year": 2024,
-            "timer_month": "01",
-            "timer_day": 1,
-            "timer_hour": 0,
-            "timer_minute": 0,
-            "timer_extend": 7,
-            "timer_end_message": "Sale has ended",
-            "show_timer_days": true,
-            "show_timer_hours": true,
-            "show_timer_minutes": true,
-            "show_timer_seconds": true
-          }
         }
       },
       "block_order": [
-        "text_slide_nDyLNw",
-        "5e0cad2e-d931-416e-ac29-51a4a683ade2",
-        "24edc9cf-38cd-4946-a269-106e12d7d3ef"
+        "text_slide_nDyLNw"
       ],
       "settings": {
         "slider_autoplay_interval": 5,

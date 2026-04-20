@@ -56,37 +56,21 @@
         "item_3TAc84": {
           "type": "item",
           "settings": {
-            "title": "Store Specification 1",
+            "title": "DROP:2",
             "link": ""
           }
         },
         "item_bGhpzp": {
           "type": "item",
           "settings": {
-            "title": "Store Specification 2",
-            "link": ""
-          }
-        },
-        "item_7Ax7B8": {
-          "type": "item",
-          "settings": {
-            "title": "Store Specification 3",
-            "link": ""
-          }
-        },
-        "item_ntqdri": {
-          "type": "item",
-          "settings": {
-            "title": "Store Specification 4",
+            "title": "Coming:SOON",
             "link": ""
           }
         }
       },
       "block_order": [
         "item_3TAc84",
-        "item_bGhpzp",
-        "item_7Ax7B8",
-        "item_ntqdri"
+        "item_bGhpzp"
       ],
       "name": "t:sections.marquees.name",
       "settings": {
