@@ -128,15 +128,15 @@
     "977cac03-4044-4567-8907-fa55103a47eb": {
       "type": "complete-the-set",
       "blocks": {
-        "fec25a48-cc42-4f7d-bbf5-215567a945e9": {
+        "94d964a1-0d79-4544-8288-24863da87e2d": {
           "type": "popup-drawer",
           "settings": {
-            "button_text": "Description",
+            "button_text": "Model Measurments",
             "button_type": "drawer",
             "button_url": "",
-            "drawer_richtext": "<p>[description]</p>",
+            "drawer_richtext": "",
             "drawer_page": "",
-            "show_model_information": false
+            "show_model_information": true
           }
         },
         "4f41f466-653b-4675-91c2-051a7830a3cc": {
@@ -149,35 +149,11 @@
             "drawer_page": "",
             "show_model_information": false
           }
-        },
-        "f9d768f7-b69b-4425-b3d7-33216740b2dd": {
-          "type": "popup-drawer",
-          "settings": {
-            "button_text": "Stylist Tip",
-            "button_type": "drawer",
-            "button_url": "",
-            "drawer_richtext": "<p>This top is designed to be worn with any of our FAE bottoms. Although our personal favourite is when it is paired with the Birdie bottoms in Coconut.</p>",
-            "drawer_page": "",
-            "show_model_information": false
-          }
-        },
-        "94d964a1-0d79-4544-8288-24863da87e2d": {
-          "type": "popup-drawer",
-          "settings": {
-            "button_text": "Model Measurments",
-            "button_type": "drawer",
-            "button_url": "",
-            "drawer_richtext": "",
-            "drawer_page": "",
-            "show_model_information": true
-          }
         }
       },
       "block_order": [
-        "fec25a48-cc42-4f7d-bbf5-215567a945e9",
-        "4f41f466-653b-4675-91c2-051a7830a3cc",
-        "f9d768f7-b69b-4425-b3d7-33216740b2dd",
-        "94d964a1-0d79-4544-8288-24863da87e2d"
+        "94d964a1-0d79-4544-8288-24863da87e2d",
+        "4f41f466-653b-4675-91c2-051a7830a3cc"
       ],
       "settings": {
         "title": "Complete the set",
