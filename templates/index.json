@@ -126,7 +126,7 @@
         "heading_size": "h3",
         "heading_alignment": "start",
         "color_scheme": "",
-        "section_width": "fluid",
+        "section_width": "full",
         "spacing_top": "0",
         "spacing_bottom": "2"
       }
