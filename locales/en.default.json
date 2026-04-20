@@ -526,6 +526,7 @@
       },
       "size_guide": "Size guide",
       "model_information": {
+        "section_heading": "Model information",
         "photo": "Photo",
         "name": "Name",
         "eyes": "Eyes",

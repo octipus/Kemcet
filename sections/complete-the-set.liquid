@@ -14,9 +14,19 @@
     assign section_style_classes = section_style_classes | append: 'section-complete-the-set--flipped-mobile '
   endif
 
+  assign complete_the_set_product = product | default: section.settings.default_product
+  assign section_needs_model_information = false
+  for block in section.blocks
+    if block.settings.show_model_information
+      assign section_needs_model_information = true
+    endif
+  endfor
 -%}
 
 {{- 'section-complete-the-set.css' | asset_url | stylesheet_tag -}}
+{%- if section_needs_model_information -%}
+  {{- 'section-product.css' | asset_url | stylesheet_tag -}}
+{%- endif -%}
 {%- render 'section-common-styles', section: section -%}
 
 {%- if show_products -%}
@@ -97,7 +107,7 @@
               </div>
               </a>
             </div>
-            {%- elsif block.settings.button_type == 'drawer' and block.settings.drawer_page != blank or block.settings.drawer_richtext != blank -%}
+            {%- elsif block.settings.button_type == 'drawer' and block.settings.drawer_page != blank or block.settings.drawer_richtext != blank or block.settings.show_model_information -%}
               <menu-drawer class="section__drawer" {{ block.shopify_attributes }}>
                 <details id="Complementary-{{ forloop.index0 }}-drawer" class="drawer__container">
                   <summary class="drawer__button drawer__button--text section__drawer-button link svg-color-inherit" tabindex="0">
@@ -130,17 +140,26 @@
                         {%- if block.settings.drawer_page != blank -%}
                           {{- block.settings.drawer_page.content -}}
                         {%- elsif block.settings.drawer_richtext contains '[description]' -%}
-                          {{- product.description -}}
+                          {{- complete_the_set_product.description -}}
                         {%- elsif block.settings.drawer_richtext != blank -%}
                           {{- block.settings.drawer_richtext -}}
                         {%- endif -%}
                       </div>
+                      {%- if block.settings.show_model_information and complete_the_set_product != blank -%}
+                        <div class="model-information-container">
+                          {%- render 'model-information',
+                            models: complete_the_set_product.metafields.custom.models.value,
+                            section_id: section.id,
+                            block_id: block.id
+                          -%}
+                        </div>
+                      {%- endif -%}
                     </div>
                   </div>
                 </details>
               </menu-drawer>
 
-            {%- elsif block.settings.button_type == 'collapsible' and block.settings.drawer_page != blank or block.settings.drawer_richtext != blank -%}
+            {%- elsif block.settings.button_type == 'collapsible' and block.settings.drawer_page != blank or block.settings.drawer_richtext != blank or block.settings.show_model_information -%}
 
               <div class="section__drawer" {{ block.shopify_attributes }}>
                 <div id="Complementary-{{ forloop.index0 }}-collapsible" class="drawer__container">
@@ -156,11 +175,20 @@
                         {%- if block.settings.drawer_page != blank -%}
                           {{- block.settings.drawer_page.content -}}
                         {%- elsif block.settings.drawer_richtext contains '[description]' -%}
-                          {{- product.description -}}
+                          {{- complete_the_set_product.description -}}
                         {%- elsif block.settings.drawer_richtext != blank -%}
                           {{- block.settings.drawer_richtext -}}
                         {%- endif -%}
                       </div>
+                      {%- if block.settings.show_model_information and complete_the_set_product != blank -%}
+                        <div class="model-information-container">
+                          {%- render 'model-information',
+                            models: complete_the_set_product.metafields.custom.models.value,
+                            section_id: section.id,
+                            block_id: block.id
+                          -%}
+                        </div>
+                      {%- endif -%}
                     </div>
                   </div>
                 </div>
@@ -396,6 +424,17 @@
           "id": "drawer_page",
           "label": "t:sections.complete-the-set.blocks.popup-drawer.settings.drawer_page.label",
           "info": "t:sections.complete-the-set.blocks.popup-drawer.settings.drawer_page.info"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.complete-the-set.blocks.popup-drawer.settings.header_model_information.content"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_model_information",
+          "label": "t:sections.complete-the-set.blocks.popup-drawer.settings.show_model_information.label",
+          "info": "t:sections.complete-the-set.blocks.popup-drawer.settings.show_model_information.info",
+          "default": false
         }
       ]
     }

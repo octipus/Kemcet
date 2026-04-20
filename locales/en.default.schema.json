@@ -4481,6 +4481,13 @@
             "drawer_page": {
               "label": "Page",
               "info": "If page is selected body text setting will be ignored."
+            },
+            "header_model_information": {
+              "content": "Model information"
+            },
+            "show_model_information": {
+              "label": "Show model information",
+              "info": "Uses the same product metafield as the product page size guide (custom.models). On non-product templates, set Default product in the section settings."
             }
           }
         }
