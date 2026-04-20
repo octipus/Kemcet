@@ -42,7 +42,8 @@
             "title": "Variant picker",
             "back_in_stock": false,
             "variant_picker_layout": "product-selector--default",
-            "size_guide_page": "{{ product.metafields.custom.size_guide.value }}"
+            "size_guide_page": "{{ product.metafields.custom.size_guide.value }}",
+            "show_model_information": true
           }
         },
         "1e939cd6-0955-4135-a9e5-c50faef01437": {
@@ -134,7 +135,8 @@
             "button_type": "drawer",
             "button_url": "",
             "drawer_richtext": "<p>[description]</p>",
-            "drawer_page": ""
+            "drawer_page": "",
+            "show_model_information": false
           }
         },
         "4f41f466-653b-4675-91c2-051a7830a3cc": {
@@ -144,7 +146,8 @@
             "button_type": "drawer",
             "button_url": "",
             "drawer_richtext": "<p>Shipping & Returns</p><ul><li>Free shipping on US orders over $150</li><li>US Flat Rate Shipping $5</li><li>International shipping & duties charges calculated at checkout</li><li>Carbon-Neutral Shipping</li><li>All of our packaging is plastic-free and recyclable. If you have curbside recycling in your area, you should be able to pop all of our packaging in the bin, but you can use How2Recycle to double check!</li></ul><p>For more info on shipping, returns, & international orders swing by our FAQs</p>",
-            "drawer_page": ""
+            "drawer_page": "",
+            "show_model_information": false
           }
         },
         "f9d768f7-b69b-4425-b3d7-33216740b2dd": {
@@ -154,7 +157,8 @@
             "button_type": "drawer",
             "button_url": "",
             "drawer_richtext": "<p>This top is designed to be worn with any of our FAE bottoms. Although our personal favourite is when it is paired with the Birdie bottoms in Coconut.</p>",
-            "drawer_page": ""
+            "drawer_page": "",
+            "show_model_information": false
           }
         },
         "94d964a1-0d79-4544-8288-24863da87e2d": {
@@ -163,18 +167,9 @@
             "button_text": "Model Measurments",
             "button_type": "drawer",
             "button_url": "",
-            "drawer_richtext": "<p>Bust: 89cm l U Bust: 73cm l Hips: 77cm | L Hips: 88cmModel wears size</p><p><strong>SMALL</strong> top and bottom</p>",
-            "drawer_page": ""
-          }
-        },
-        "ab4932da-0d31-4117-a170-3d12f59976ca": {
-          "type": "popup-drawer",
-          "settings": {
-            "button_text": "Contact Us",
-            "button_type": "link",
-            "button_url": "",
             "drawer_richtext": "",
-            "drawer_page": ""
+            "drawer_page": "",
+            "show_model_information": true
           }
         }
       },
@@ -182,8 +177,7 @@
         "fec25a48-cc42-4f7d-bbf5-215567a945e9",
         "4f41f466-653b-4675-91c2-051a7830a3cc",
         "f9d768f7-b69b-4425-b3d7-33216740b2dd",
-        "94d964a1-0d79-4544-8288-24863da87e2d",
-        "ab4932da-0d31-4117-a170-3d12f59976ca"
+        "94d964a1-0d79-4544-8288-24863da87e2d"
       ],
       "settings": {
         "title": "Complete the set",
