@@ -81,8 +81,54 @@
         "section_width": "page",
         "color_scheme": "scheme-2",
         "spacing_top": "0",
-        "spacing_bottom": "1",
+        "spacing_bottom": "0",
         "section_border": "none"
+      }
+    },
+    "content_tiles_jbkkJG": {
+      "type": "content-tiles",
+      "blocks": {
+        "tile_3cjEwL": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 2,
+            "color_scheme": "scheme-2",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
+            "heading": "SHOP:SLIM-FIT",
+            "heading_size": "h2",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/KEM_12314.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "2"
+          }
+        }
+      },
+      "block_order": [
+        "tile_3cjEwL"
+      ],
+      "name": "t:sections.content-tiles.name",
+      "settings": {
+        "block_order_mobile": false,
+        "heading": "",
+        "heading_size": "h3",
+        "heading_alignment": "start",
+        "color_scheme": "",
+        "section_width": "fluid",
+        "spacing_top": "0",
+        "spacing_bottom": "2"
       }
     },
     "featured_products_qYUAtm": {
@@ -160,10 +206,12 @@
             "content_position": "justify-center",
             "content_alignment": "text-center align-center",
             "image_desktop": "shopify://shop_images/KEM_12314.jpg",
+            "video_desktop_external": "",
             "desktop_aspect_ratio": "auto",
             "content_position_mobile": "justify-center--mobile",
             "content_alignment_mobile": "text-center--mobile align-center--mobile",
             "image_mobile": "shopify://shop_images/KEM_12314.jpg",
+            "video_mobile_external": "",
             "mobile_aspect_ratio": "1/1",
             "video_mobile_compact": false
           }
@@ -185,9 +233,11 @@
             "button_separator": false,
             "content_position": "justify-center",
             "content_alignment": "text-center align-center",
+            "video_desktop_external": "",
             "desktop_aspect_ratio": "auto",
             "content_position_mobile": "justify-center--mobile",
             "content_alignment_mobile": "text-center--mobile align-center--mobile",
+            "video_mobile_external": "",
             "mobile_aspect_ratio": "1/1",
             "video_mobile_compact": false
           }
@@ -273,6 +323,7 @@
   "order": [
     "1658995208ad05f95f",
     "marquees_46wmPY",
+    "content_tiles_jbkkJG",
     "featured_products_qYUAtm",
     "dual_tiles_XgRNM3",
     "shop_the_look_gK364C"
