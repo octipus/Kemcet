@@ -275,6 +275,7 @@
         "tile_gf87MM",
         "tile_giBkq9"
       ],
+      "disabled": true,
       "name": "t:sections.dual-tiles.name",
       "settings": {
         "block_size": "half",
