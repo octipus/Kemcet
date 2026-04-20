@@ -29,7 +29,7 @@
           "settings": {
             "column_factor": 1,
             "row_factor": 1,
-            "title": "Account",
+            "title": "Quicklinks",
             "heading_size": "h5",
             "menu": "footer-collections"
           }
