@@ -50,6 +50,57 @@
         "slider_color_scheme": "scheme-6"
       }
     },
+    "marquees_46wmPY": {
+      "type": "marquees",
+      "blocks": {
+        "item_3TAc84": {
+          "type": "item",
+          "settings": {
+            "title": "Store Specification 1",
+            "link": ""
+          }
+        },
+        "item_bGhpzp": {
+          "type": "item",
+          "settings": {
+            "title": "Store Specification 2",
+            "link": ""
+          }
+        },
+        "item_7Ax7B8": {
+          "type": "item",
+          "settings": {
+            "title": "Store Specification 3",
+            "link": ""
+          }
+        },
+        "item_ntqdri": {
+          "type": "item",
+          "settings": {
+            "title": "Store Specification 4",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_3TAc84",
+        "item_bGhpzp",
+        "item_7Ax7B8",
+        "item_ntqdri"
+      ],
+      "name": "t:sections.marquees.name",
+      "settings": {
+        "enable_animation": true,
+        "marquee_duration_rate": 5,
+        "marquee_font_size": 1,
+        "marquee_icon_size": 1,
+        "section_width": "page",
+        "color_scheme": "",
+        "spacing_top": "1",
+        "spacing_bottom": "1",
+        "section_border": "none"
+      }
+    },
     "featured_products_qYUAtm": {
       "type": "featured-products",
       "blocks": {
@@ -99,8 +150,8 @@
         "max_products": 8,
         "section_width": "page",
         "color_scheme": "",
-        "spacing_top": "2",
-        "spacing_bottom": "2",
+        "spacing_top": "1",
+        "spacing_bottom": "1",
         "section_border": "none"
       }
     },
@@ -170,8 +221,8 @@
         "reverse_on_mobile": false,
         "section_width": "fluid",
         "color_scheme": "",
-        "spacing_top": "2",
-        "spacing_bottom": "2",
+        "spacing_top": "0",
+        "spacing_bottom": "1",
         "section_border": "none"
       }
     },
@@ -237,6 +288,7 @@
   },
   "order": [
     "1658995208ad05f95f",
+    "marquees_46wmPY",
     "featured_products_qYUAtm",
     "dual_tiles_XgRNM3",
     "shop_the_look_gK364C"
