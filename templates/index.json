@@ -56,7 +56,7 @@
         "item_3TAc84": {
           "type": "item",
           "settings": {
-            "title": "DROP:2",
+            "title": "DROP:no.2",
             "link": ""
           }
         },
@@ -132,7 +132,7 @@
         "button_url": "",
         "button_style": "button--filled",
         "max_products": 8,
-        "section_width": "page",
+        "section_width": "fluid",
         "color_scheme": "",
         "spacing_top": "1",
         "spacing_bottom": "1",
