@@ -101,6 +101,33 @@
             "content_alignment": "align-center text-center",
             "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
             "media_position": "background",
+            "heading": "",
+            "heading_size": "h2",
+            "text": "",
+            "button_label": "SHOP:SLIM-FIT",
+            "button_link": "shopify://collections/t-shirts",
+            "button_style": "button--filled",
+            "image": "shopify://shop_images/KEM_12314.jpg",
+            "video_external": "",
+            "show_controls_on_video": false,
+            "video_external_mobile": "",
+            "show_controls_on_video_mobile": false,
+            "spacing_inner": "0"
+          }
+        },
+        "tile_8hqzNd": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "column_factor": 3,
+            "row_factor": 2,
+            "color_scheme": "scheme-2",
+            "gradient_background_color": "",
+            "tile_aspect_ratio": "auto",
+            "content_position_vertical": "justify-center",
+            "content_alignment": "align-center text-center",
+            "content_alignment_for_mobile": "align-start--mobile text-start--mobile",
+            "media_position": "background",
             "heading": "SHOP:SLIM-FIT",
             "heading_size": "h2",
             "text": "",
@@ -112,12 +139,13 @@
             "show_controls_on_video": false,
             "video_external_mobile": "",
             "show_controls_on_video_mobile": false,
-            "spacing_inner": "2"
+            "spacing_inner": "0"
           }
         }
       },
       "block_order": [
-        "tile_3cjEwL"
+        "tile_3cjEwL",
+        "tile_8hqzNd"
       ],
       "name": "t:sections.content-tiles.name",
       "settings": {
@@ -128,7 +156,7 @@
         "color_scheme": "",
         "section_width": "full",
         "spacing_top": "0",
-        "spacing_bottom": "2"
+        "spacing_bottom": "1"
       }
     },
     "featured_products_qYUAtm": {
