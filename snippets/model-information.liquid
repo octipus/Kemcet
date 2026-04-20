@@ -1,0 +1,405 @@
+{% comment %}
+  Renders model metafield data as tabbed tables (multiple models) or a single table.
+  Accepts:
+  - models: array from product.metafields.custom.models.value
+  - section_id, block_id: for unique DOM ids
+{% endcomment %}
+{%- liquid
+  assign models = models | default: blank
+  assign model_count = 0
+  if models != blank
+    for model in models
+      assign model_count = model_count | plus: 1
+    endfor
+  endif
+
+  assign any_convertible_dimension = false
+  if models != blank
+    for m in models
+      if m.height != blank and m.height.value != blank
+        assign any_convertible_dimension = true
+      endif
+      if m.chest != blank and m.chest.value != blank
+        assign any_convertible_dimension = true
+      endif
+      if m.waist != blank and m.waist.value != blank
+        assign any_convertible_dimension = true
+      endif
+      if m.hip != blank and m.hip.value != blank
+        assign any_convertible_dimension = true
+      endif
+      if m.leg != blank and m.leg.value != blank
+        assign any_convertible_dimension = true
+      endif
+    endfor
+  endif
+-%}
+
+{%- if model_count > 0 -%}
+  {%- assign tabs_root_id = 'model-info-tabs-' | append: section_id | append: '-' | append: block_id -%}
+
+  <div
+    class="model-information-tabs{% if model_count > 1 %} model-information-tabs--multi{% endif %} main-product__tabs-wrapper"
+    id="{{ tabs_root_id }}"
+    data-model-tabs-root
+    {% if model_count > 1 %}
+      data-multi="true"
+    {% endif %}
+  >
+    {%- if model_count > 1 -%}
+      <div class="model-information-tabs__toolbar">
+        <div class="main-product__tabs model-information-tabs__nav" role="tablist">
+          {%- for model in models -%}
+            {%- liquid
+              assign tab_label = model.name | default: '' | strip
+              if tab_label == blank
+                assign tab_label = 'products.product.model_information.model_tab' | t: index: forloop.index
+              endif
+              assign panel_id = 'model-tab-panel-' | append: section_id | append: '-' | append: block_id | append: '-' | append: forloop.index0
+            -%}
+            <button
+              type="button"
+              class="main-product__tab model-information-tabs__tab{% if forloop.first %} active{% endif %}"
+              role="tab"
+              id="tab-{{ section_id }}-{{ block_id }}-{{ forloop.index0 }}"
+              aria-controls="{{ panel_id }}"
+              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+              data-model-tab-btn
+              data-model-tab-target="{{ panel_id }}"
+            >
+              {{- tab_label | escape -}}
+            </button>
+          {%- endfor -%}
+        </div>
+        {%- if any_convertible_dimension -%}
+          <div
+            class="model-information-unit-toggle"
+            role="group"
+            aria-label="{{ 'products.product.model_information.units_label' | t | escape }}"
+          >
+            <button
+              type="button"
+              class="model-information-unit-toggle__btn is-active"
+              data-model-unit="cm"
+              aria-pressed="true"
+            >
+              {{- 'products.product.model_information.unit_cm' | t -}}
+            </button>
+            <button type="button" class="model-information-unit-toggle__btn" data-model-unit="in" aria-pressed="false">
+              {{- 'products.product.model_information.unit_in' | t -}}
+            </button>
+          </div>
+        {%- endif -%}
+      </div>
+    {%- elsif any_convertible_dimension -%}
+      <div class="model-information-tabs__toolbar model-information-tabs__toolbar--units-only">
+        <div
+          class="model-information-unit-toggle"
+          role="group"
+          aria-label="{{ 'products.product.model_information.units_label' | t | escape }}"
+        >
+          <button
+            type="button"
+            class="model-information-unit-toggle__btn is-active"
+            data-model-unit="cm"
+            aria-pressed="true"
+          >
+            {{- 'products.product.model_information.unit_cm' | t -}}
+          </button>
+          <button type="button" class="model-information-unit-toggle__btn" data-model-unit="in" aria-pressed="false">
+            {{- 'products.product.model_information.unit_in' | t -}}
+          </button>
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- for model in models -%}
+      {%- liquid
+        assign panel_id = 'model-tab-panel-' | append: section_id | append: '-' | append: block_id | append: '-' | append: forloop.index0
+
+        assign height_display = ''
+        if model.height != blank and model.height.value != blank
+          assign height_display = model.height.value | append: ''
+          if model.height.unit != blank
+            assign height_display = height_display | append: ' ' | append: model.height.unit
+          endif
+        endif
+
+        assign chest_display = ''
+        if model.chest != blank and model.chest.value != blank
+          assign chest_display = model.chest.value | append: ''
+          if model.chest.unit != blank
+            assign chest_display = chest_display | append: ' ' | append: model.chest.unit
+          endif
+        endif
+
+        assign waist_display = ''
+        if model.waist != blank and model.waist.value != blank
+          assign waist_display = model.waist.value | append: ''
+          if model.waist.unit != blank
+            assign waist_display = waist_display | append: ' ' | append: model.waist.unit
+          endif
+        endif
+
+        assign hip_display = ''
+        if model.hip != blank and model.hip.value != blank
+          assign hip_display = model.hip.value | append: ''
+          if model.hip.unit != blank
+            assign hip_display = hip_display | append: ' ' | append: model.hip.unit
+          endif
+        endif
+
+        assign leg_display = ''
+        if model.leg != blank and model.leg.value != blank
+          assign leg_display = model.leg.value | append: ''
+          if model.leg.unit != blank
+            assign leg_display = leg_display | append: ' ' | append: model.leg.unit
+          endif
+        endif
+
+        assign show_profile = false
+        if model.profile_image != blank or model.name != blank or model.eyes != blank or model.hair != blank
+          assign show_profile = true
+        endif
+
+        assign show_measurements = false
+        if height_display != blank or chest_display != blank or waist_display != blank or hip_display != blank or leg_display != blank or model.shoe_size != blank or model.description != blank
+          assign show_measurements = true
+        endif
+      -%}
+      {%- capture height_cm -%}{%- render 'model-measurement-to-cm', dimension: model.height -%}{%- endcapture -%}
+      {%- assign height_cm = height_cm | strip -%}
+      {%- capture chest_cm -%}{%- render 'model-measurement-to-cm', dimension: model.chest -%}{%- endcapture -%}
+      {%- assign chest_cm = chest_cm | strip -%}
+      {%- capture waist_cm -%}{%- render 'model-measurement-to-cm', dimension: model.waist -%}{%- endcapture -%}
+      {%- assign waist_cm = waist_cm | strip -%}
+      {%- capture hip_cm -%}{%- render 'model-measurement-to-cm', dimension: model.hip -%}{%- endcapture -%}
+      {%- assign hip_cm = hip_cm | strip -%}
+      {%- capture leg_cm -%}{%- render 'model-measurement-to-cm', dimension: model.leg -%}{%- endcapture -%}
+      {%- assign leg_cm = leg_cm | strip -%}
+      <div
+        id="{{ panel_id }}"
+        class="model-information-tabs__panel rte{% if model_count > 1 and forloop.first == false %} is-hidden{% endif %}"
+        role="tabpanel"
+        {% if model_count > 1 %}
+          aria-labelledby="tab-{{ section_id }}-{{ block_id }}-{{ forloop.index0 }}"
+        {% endif %}
+        data-model-tab-panel
+        {% if model_count > 1 and forloop.first == false %}
+          hidden
+        {% endif %}
+      >
+        <div class="model-information">
+          {%- if show_profile -%}
+            <div class="model-information__profile">
+              {%- if model.profile_image != blank -%}
+                <div class="model-information__photo">{{ model.profile_image | metafield_tag }}</div>
+              {%- endif -%}
+              <div class="model-information__identity">
+                {%- if model.name != blank -%}
+                  <div class="model-information__identity-row">
+                    <span class="model-information__label">{{ 'products.product.model_information.name' | t }}</span>
+                    <span class="model-information__value">{{ model.name | escape }}</span>
+                  </div>
+                {%- endif -%}
+                {%- if model.eyes != blank -%}
+                  <div class="model-information__identity-row">
+                    <span class="model-information__label">{{ 'products.product.model_information.eyes' | t }}</span>
+                    <span class="model-information__value">{{ model.eyes | escape }}</span>
+                  </div>
+                {%- endif -%}
+                {%- if model.hair != blank -%}
+                  <div class="model-information__identity-row">
+                    <span class="model-information__label">{{ 'products.product.model_information.hair' | t }}</span>
+                    <span class="model-information__value">{{ model.hair | escape }}</span>
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endif -%}
+
+          {%- if show_measurements -%}
+            <table class="model-information-table">
+              <tbody>
+                {%- if height_display != blank -%}
+                  <tr>
+                    <th scope="row">{{ 'products.product.model_information.height' | t }}</th>
+                    <td
+                      {% if height_cm != blank %}
+                        class="model-information-table__measurement"
+                        data-cm="{{ height_cm | escape }}"
+                      {% endif %}
+                    >
+                      {{- height_display -}}
+                    </td>
+                  </tr>
+                {%- endif -%}
+                {%- if chest_display != blank -%}
+                  <tr>
+                    <th scope="row">{{ 'products.product.model_information.chest' | t }}</th>
+                    <td
+                      {% if chest_cm != blank %}
+                        class="model-information-table__measurement"
+                        data-cm="{{ chest_cm | escape }}"
+                      {% endif %}
+                    >
+                      {{- chest_display -}}
+                    </td>
+                  </tr>
+                {%- endif -%}
+                {%- if waist_display != blank -%}
+                  <tr>
+                    <th scope="row">{{ 'products.product.model_information.waist' | t }}</th>
+                    <td
+                      {% if waist_cm != blank %}
+                        class="model-information-table__measurement"
+                        data-cm="{{ waist_cm | escape }}"
+                      {% endif %}
+                    >
+                      {{- waist_display -}}
+                    </td>
+                  </tr>
+                {%- endif -%}
+                {%- if hip_display != blank -%}
+                  <tr>
+                    <th scope="row">{{ 'products.product.model_information.hip' | t }}</th>
+                    <td
+                      {% if hip_cm != blank %}
+                        class="model-information-table__measurement"
+                        data-cm="{{ hip_cm | escape }}"
+                      {% endif %}
+                    >
+                      {{- hip_display -}}
+                    </td>
+                  </tr>
+                {%- endif -%}
+                {%- if leg_display != blank -%}
+                  <tr>
+                    <th scope="row">{{ 'products.product.model_information.leg' | t }}</th>
+                    <td
+                      {% if leg_cm != blank %}
+                        class="model-information-table__measurement"
+                        data-cm="{{ leg_cm | escape }}"
+                      {% endif %}
+                    >
+                      {{- leg_display -}}
+                    </td>
+                  </tr>
+                {%- endif -%}
+                {%- if model.shoe_size != blank -%}
+                  <tr>
+                    <th scope="row">{{ 'products.product.model_information.shoe_size' | t }}</th>
+                    <td>{{ model.shoe_size | escape }}</td>
+                  </tr>
+                {%- endif -%}
+                {%- if model.description != blank -%}
+                  <tr>
+                    <td colspan="2" class="model-information-table__description rte">{{ model.description | metafield_tag }}</td>
+                  </tr>
+                {%- endif -%}
+              </tbody>
+            </table>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+
+  {%- if model_count > 1 or any_convertible_dimension -%}
+    <script>
+      (function () {
+        var root = document.getElementById('{{ tabs_root_id }}');
+        if (!root || root.dataset.modelInfoInit === '1') return;
+        root.dataset.modelInfoInit = '1';
+
+        var STORAGE_KEY = 'kemcet-model-measurements-unit';
+
+        function formatMeasurement(cmStr, unit) {
+          var cm = parseFloat(cmStr, 10);
+          if (isNaN(cm)) return '';
+          if (unit === 'in') {
+            var inches = cm / 2.54;
+            var rounded = Math.round(inches * 10) / 10;
+            return rounded + ' in';
+          }
+          var n = Math.round(cm * 10) / 10;
+          if (Math.abs(n - Math.round(n)) < 0.01) {
+            n = Math.round(n);
+          }
+          return n + ' cm';
+        }
+
+        function applyMeasurementUnit(unit) {
+          root.querySelectorAll('td[data-cm]').forEach(function (cell) {
+            var cm = cell.getAttribute('data-cm');
+            if (!cm) return;
+            cell.textContent = formatMeasurement(cm, unit);
+          });
+        }
+
+        function readStoredUnit() {
+          try {
+            var v = localStorage.getItem(STORAGE_KEY);
+            if (v === 'in' || v === 'cm') return v;
+          } catch (e) {}
+          return 'cm';
+        }
+
+        function persistUnit(unit) {
+          try {
+            localStorage.setItem(STORAGE_KEY, unit);
+          } catch (e) {}
+        }
+
+        var unitGroups = root.querySelectorAll('.model-information-unit-toggle');
+        if (unitGroups.length) {
+          var initialUnit = readStoredUnit();
+          applyMeasurementUnit(initialUnit);
+          unitGroups.forEach(function (group) {
+            group.querySelectorAll('[data-model-unit]').forEach(function (btn) {
+              var u = btn.getAttribute('data-model-unit');
+              var on = u === initialUnit;
+              btn.classList.toggle('is-active', on);
+              btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+            });
+          });
+
+          root.addEventListener('click', function (e) {
+            var t = e.target.closest('[data-model-unit]');
+            if (!t || !root.contains(t)) return;
+            var unit = t.getAttribute('data-model-unit');
+            if (unit !== 'cm' && unit !== 'in') return;
+            persistUnit(unit);
+            applyMeasurementUnit(unit);
+            root.querySelectorAll('.model-information-unit-toggle [data-model-unit]').forEach(function (btn) {
+              var u = btn.getAttribute('data-model-unit');
+              var on = u === unit;
+              btn.classList.toggle('is-active', on);
+              btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+            });
+          });
+        }
+
+        var tabButtons = root.querySelectorAll('[data-model-tab-btn]');
+        if (tabButtons.length) {
+          var panels = root.querySelectorAll('[data-model-tab-panel]');
+          tabButtons.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              var targetId = btn.getAttribute('data-model-tab-target');
+              panels.forEach(function (panel) {
+                var show = panel.id === targetId;
+                panel.hidden = !show;
+                panel.classList.toggle('is-hidden', !show);
+              });
+              tabButtons.forEach(function (b) {
+                var on = b === btn;
+                b.classList.toggle('active', on);
+                b.setAttribute('aria-selected', on ? 'true' : 'false');
+              });
+            });
+          });
+        }
+      })();
+    </script>
+  {%- endif -%}
+{%- endif -%}

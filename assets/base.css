@@ -2032,7 +2032,7 @@ dropdown-input.has-error .dropdown__button {
 }
 
 .rte table td:not(:first-child) {
-  text-align: center;
+  text-align: right;
 }
 
 .rte iframe {

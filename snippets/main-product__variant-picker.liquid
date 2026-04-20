@@ -47,6 +47,17 @@
                   </div>
                 </div>
               </div>
+              {% if block.settings.show_model_information %}
+                <div class="model-information-container">
+                  {% comment %} {{ product.metafields.custom.models.value | json }} {% endcomment %}
+                  <h2 class="drawer__title heading-static">Model Information</h2>
+                  {%- render 'model-information',
+                    models: product.metafields.custom.models.value,
+                    section_id: section.id,
+                    block_id: block.id
+                  -%}
+                </div>
+              {% endif %}
             </div>
           </div>
         </details>

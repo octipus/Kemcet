@@ -1,0 +1,32 @@
+{% comment %}
+  Prints a numeric centimeter value for a Shopify measurement field (metaobject), or nothing.
+  Accepts: dimension — measurement drop with .value / .unit, or nested .value.value / .value.unit
+  (Shopify may expose dimension.value as an inner measurement object; | plus: 0 on that object becomes 0.)
+{% endcomment %}
+{%- assign dim = dimension | default: blank -%}
+{%- if dim != blank and dim.value != blank -%}
+  {%- liquid
+    assign hv = 0
+    assign hu = ''
+    if dim.value.value != blank
+      assign hv = dim.value.value | plus: 0
+      assign hu = dim.value.unit | default: dim.unit | default: 'cm' | downcase | strip
+    else
+      assign hv = dim.value | plus: 0
+      assign hu = dim.unit | default: 'cm' | downcase | strip
+    endif
+    assign out_cm = hv
+  -%}
+  {%- if hu contains 'milli' -%}
+    {%- assign out_cm = hv | divided_by: 10.0 -%}
+  {%- elsif hu == 'cm' or hu contains 'centi' -%}
+    {%- assign out_cm = hv -%}
+  {%- elsif hu == 'm' or hu == 'meter' or hu == 'metre' or hu == 'meters' -%}
+    {%- assign out_cm = hv | times: 100 -%}
+  {%- elsif hu contains 'inch' or hu == 'inches' or hu == 'in' -%}
+    {%- assign out_cm = hv | times: 2.54 -%}
+  {%- elsif hu contains 'foot' or hu == 'ft' or hu == 'feet' -%}
+    {%- assign out_cm = hv | times: 30.48 -%}
+  {%- endif -%}
+  {{- out_cm -}}
+{%- endif -%}

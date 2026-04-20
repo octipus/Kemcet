@@ -141,7 +141,7 @@ html.js[dir='rtl'] .facets .drawer__content {
 
   html.no-js .drawer__container[open],
   html.js .drawer__content {
-    padding-inline: 4.8rem;
+    padding-inline: 1.8rem;
   }
 }
 

@@ -525,6 +525,22 @@
         "label": "Media gallery"
       },
       "size_guide": "Size guide",
+      "model_information": {
+        "photo": "Photo",
+        "name": "Name",
+        "eyes": "Eyes",
+        "hair": "Hair",
+        "height": "Height",
+        "chest": "Chest",
+        "waist": "Waist",
+        "hip": "Hip",
+        "leg": "Leg",
+        "shoe_size": "Shoe size",
+        "model_tab": "Model {{ index }}",
+        "units_label": "Measurement units",
+        "unit_cm": "cm",
+        "unit_in": "in"
+      },
       "pickup_availability": {
         "popup": {
           "title": "Pickup availabilities"
