@@ -104,6 +104,77 @@
         "section_border": "none"
       }
     },
+    "dual_tiles_XgRNM3": {
+      "type": "dual-tiles",
+      "blocks": {
+        "tile_gf87MM": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "color_scheme": "scheme-3",
+            "media_position": "bottom",
+            "spacing_inner_horizontal": "3",
+            "spacing_inner_vertical": "3",
+            "heading": "Heading for Dual Content Tiles",
+            "heading_size": "h2",
+            "text": "",
+            "button_text": "",
+            "button_url": "",
+            "button_style": "button--filled",
+            "button_separator": false,
+            "content_position": "justify-center",
+            "content_alignment": "text-center align-center",
+            "image_desktop": "shopify://shop_images/KEM_12314.jpg",
+            "desktop_aspect_ratio": "auto",
+            "content_position_mobile": "justify-center--mobile",
+            "content_alignment_mobile": "text-center--mobile align-center--mobile",
+            "image_mobile": "shopify://shop_images/KEM_12314.jpg",
+            "mobile_aspect_ratio": "1/1",
+            "video_mobile_compact": false
+          }
+        },
+        "tile_giBkq9": {
+          "type": "tile",
+          "settings": {
+            "show_on": "both",
+            "color_scheme": "",
+            "media_position": "top",
+            "spacing_inner_horizontal": "3",
+            "spacing_inner_vertical": "3",
+            "heading": "On sale items",
+            "heading_size": "h2",
+            "text": "",
+            "button_text": "Shop sale",
+            "button_url": "/",
+            "button_style": "button--filled",
+            "button_separator": false,
+            "content_position": "justify-center",
+            "content_alignment": "text-center align-center",
+            "desktop_aspect_ratio": "auto",
+            "content_position_mobile": "justify-center--mobile",
+            "content_alignment_mobile": "text-center--mobile align-center--mobile",
+            "mobile_aspect_ratio": "1/1",
+            "video_mobile_compact": false
+          }
+        }
+      },
+      "block_order": [
+        "tile_gf87MM",
+        "tile_giBkq9"
+      ],
+      "name": "t:sections.dual-tiles.name",
+      "settings": {
+        "block_size": "half",
+        "gap_between_tiles": "2",
+        "gap_between_tiles_mobile": "2",
+        "reverse_on_mobile": false,
+        "section_width": "page",
+        "color_scheme": "",
+        "spacing_top": "2",
+        "spacing_bottom": "2",
+        "section_border": "none"
+      }
+    },
     "shop_the_look_gK364C": {
       "type": "shop-the-look",
       "blocks": {
@@ -148,7 +219,7 @@
       ],
       "name": "t:sections.shop-the-look.name",
       "settings": {
-        "title": "KEM:Essentials",
+        "title": "coming:soon",
         "heading_size": "h2",
         "image_desktop": "shopify://shop_images/KEM_12396.jpg",
         "aspect_ratio": "auto",
@@ -167,6 +238,7 @@
   "order": [
     "1658995208ad05f95f",
     "featured_products_qYUAtm",
+    "dual_tiles_XgRNM3",
     "shop_the_look_gK364C"
   ]
 }
