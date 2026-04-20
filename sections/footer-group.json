@@ -31,7 +31,7 @@
             "row_factor": 1,
             "title": "Account",
             "heading_size": "h5",
-            "menu": ""
+            "menu": "footer-collections"
           }
         },
         "762130ce-c112-474e-ab41-0e908f95e578": {
@@ -80,8 +80,8 @@
         "first_accordion_show": true,
         "section_width": "fluid",
         "color_scheme": "",
-        "spacing_top": "2",
-        "spacing_bottom": "2",
+        "spacing_top": "1",
+        "spacing_bottom": "1",
         "section_border": "none"
       }
     },
