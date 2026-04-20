@@ -17,7 +17,7 @@
         "text_slide_nDyLNw": {
           "type": "text-slide",
           "settings": {
-            "content": "<p>Discover KEM:T-shirts</p>",
+            "content": "<p><a href=\"/collections/t-shirts\" title=\"T-shirts\">Discover KEM:T-shirts</a></p>",
             "dropdown_cards": false,
             "color_scheme": "scheme-1",
             "card_item_1__title": "",
