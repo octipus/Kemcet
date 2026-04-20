@@ -92,6 +92,17 @@
             "link_to_resource": "none",
             "icon_type": "icon-check"
           }
+        },
+        "collapsible_content_qjeXmx": {
+          "type": "collapsible_content",
+          "repeater": "{{ product.metafields.custom.models.value }}",
+          "settings": {
+            "heading": "{{ block.repeater.name.value }}",
+            "row_content": "{{ block.repeater.description | metafield_tag }}",
+            "icon": "{{ block.repeater.profile_image.value }}",
+            "label_for_product_file": "",
+            "metafield_for_product_file": ""
+          }
         }
       },
       "block_order": [
@@ -105,7 +116,8 @@
         "e6d841d6-2f71-40b3-956a-912df13f9f6e",
         "b2dabe12-2158-4ba6-bc54-9baae453acf5",
         "1ad0121e-439d-45c0-b45d-4f080836ade5",
-        "text_Mg9qWi"
+        "text_Mg9qWi",
+        "collapsible_content_qjeXmx"
       ],
       "settings": {
         "product_media_layout": "product__media-layout--partial",
