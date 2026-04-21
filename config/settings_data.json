@@ -85,6 +85,30 @@
         "type": "shopify://apps/rivyo-reviews-loyalty/blocks/app-embed/f1860e84-309f-40ca-a2df-188435a622f3",
         "disabled": false,
         "settings": {}
+      },
+      "15935093690516126329": {
+        "type": "shopify://apps/libautech-currency-converter/blocks/app-block/1ebbc2f4-fcb8-463f-b2b2-1a404ae0b286",
+        "disabled": false,
+        "settings": {
+          "displayCurrencyFlag": true,
+          "onlyCurrencyCodeInList": false,
+          "hideCurrentCurrency": false,
+          "showOnMobile": true,
+          "showOnDesktop": true,
+          "removeBoxOnMobile": false,
+          "switcherBackgroundColor": "#ffffff",
+          "switcherTextColor": "#000000",
+          "switcherBorderColor": "#000000",
+          "switcherBorderSize": 1,
+          "switcherBorderRadius": 5,
+          "transparentBackground": false,
+          "marginLeft": 18
+        }
+      },
+      "17556602330622201816": {
+        "type": "shopify://apps/rivyo-reviews-loyalty/blocks/wc_floating_reviews/f1860e84-309f-40ca-a2df-188435a622f3",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
