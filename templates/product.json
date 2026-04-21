@@ -131,7 +131,7 @@
         "94d964a1-0d79-4544-8288-24863da87e2d": {
           "type": "popup-drawer",
           "settings": {
-            "button_text": "Model Measurments",
+            "button_text": "Model Measurements",
             "button_type": "drawer",
             "button_url": "",
             "drawer_richtext": "",
