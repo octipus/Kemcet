@@ -105,7 +105,7 @@
           "switcherTextColor": "#121212",
           "switcherBorderColor": "#121212",
           "switcherBorderSize": 1,
-          "switcherBorderRadius": 5,
+          "switcherBorderRadius": 2,
           "transparentBackground": false,
           "marginLeft": 18
         }
