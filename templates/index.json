@@ -56,14 +56,14 @@
         "item_3TAc84": {
           "type": "item",
           "settings": {
-            "title": "DROP:no.2",
+            "title": "Drop 2",
             "link": ""
           }
         },
         "item_bGhpzp": {
           "type": "item",
           "settings": {
-            "title": "Coming:SOON",
+            "title": "16.05.26",
             "link": ""
           }
         }
@@ -79,7 +79,7 @@
         "marquee_font_size": 1,
         "marquee_icon_size": 1,
         "section_width": "page",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
         "spacing_top": "0",
         "spacing_bottom": "0",
         "section_border": "none"
