@@ -114,6 +114,12 @@
                 assign item_video_controls_mobile = false
               endif
 
+              assign tile_link = block.settings.button_link
+              assign make_entire_tile_clickable = false
+              if block.settings.make_entire_tile_clickable and tile_link != blank
+                assign make_entire_tile_clickable = true
+              endif
+
               assign tile_additional_classes = ''
               assign has_media = false
               assign has_mobile_media = false
@@ -154,6 +160,17 @@
                 --block-aspect-ratio: {{ item_aspect_ratio_mobile | default: item_aspect_ratio }};
                 --block-padding-multiplier: {{ block.settings.spacing_inner }};
               }
+              .block-{{ block.id }} .section-content-tiles__block-link {
+                position: absolute;
+                inset: 0;
+                z-index: 2;
+                display: block;
+                background: transparent;
+                text-decoration: none;
+              }
+              .block-{{ block.id }} .section-content-tiles__block-link::after {
+                content: none;
+              }
               @media screen and (min-width: 750px) {
                 .block-{{ block.id }} {
                   --block-aspect-ratio: {{ item_aspect_ratio }};
@@ -162,6 +179,9 @@
             {% endstyle %}
 
             <div class="section-content-tiles__block block-{{ block.id }} color-{{ block.settings.color_scheme }} gradient {{ tile_additional_classes | strip }} {{ show_on_class }} media-position--{{ block.settings.media_position }}" {{ block.shopify_attributes }}>
+              {% if make_entire_tile_clickable %}
+                <a href="{{ tile_link }}" class="section-content-tiles__block-link" aria-label="{{ item_heading | default: block.settings.button_label | default: 'Open tile link' | strip_html | escape }}"></a>
+              {% endif %}
 
               {%- if has_media -%}
                 <div class="section-content-tiles__media media{% if item_video_controls %} media--with-controls{% endif %}{% if has_mobile_media %} small-hide{% endif %}">
@@ -200,7 +220,7 @@
                     </div>
                   {%- endif -%}
                 </div>
-                {%- if block.settings.button_label != blank -%}
+                {%- if block.settings.button_label != blank and make_entire_tile_clickable == false -%}
                   {%- render 'button', type: 'link', class: 'button section-content-tiles__content--button', button_style: block.settings.button_style, value: block.settings.button_label, href: block.settings.button_link -%}
                 {%- endif -%}
               </div>
@@ -835,6 +855,12 @@
           "type": "url",
           "id": "button_link",
           "label": "t:sections.global.element.button.link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "make_entire_tile_clickable",
+          "label": "Make entire tile clickable",
+          "default": false
         },
         {
           "type": "select",
