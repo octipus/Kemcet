@@ -78,7 +78,7 @@
         "marquee_duration_rate": 5,
         "marquee_font_size": 1,
         "marquee_icon_size": 1,
-        "section_width": "page",
+        "section_width": "full",
         "color_scheme": "scheme-1",
         "spacing_top": "0",
         "spacing_bottom": "0",
