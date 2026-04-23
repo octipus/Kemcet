@@ -66,15 +66,6 @@
             "notice_just_text": false
           }
         },
-        "b2dabe12-2158-4ba6-bc54-9baae453acf5": {
-          "type": "text",
-          "settings": {
-            "text": "Free delivery and shipping",
-            "text_style": "body",
-            "link_to_resource": "none",
-            "icon_type": "icon-check"
-          }
-        },
         "1ad0121e-439d-45c0-b45d-4f080836ade5": {
           "type": "text",
           "settings": {
@@ -103,7 +94,6 @@
         "1e939cd6-0955-4135-a9e5-c50faef01437",
         "8604a6ff-ad0b-44dd-8068-1de4e062f8e8",
         "e6d841d6-2f71-40b3-956a-912df13f9f6e",
-        "b2dabe12-2158-4ba6-bc54-9baae453acf5",
         "1ad0121e-439d-45c0-b45d-4f080836ade5",
         "text_Mg9qWi"
       ],
