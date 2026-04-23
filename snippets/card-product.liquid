@@ -438,19 +438,29 @@
     {%- endunless -%}
   </div>
   {% render 'rivyio-reviews' with product_ref as product %}
-  <a href="{{- product_ref.url -}}" class="card-product__content focus-inset" role="button">
+  <div class="card-product__content">
     <h5 class="card-product__title">
       {%- if product_ref and product_ref != empty -%}
-        <span class="card-product__title-text">{{- product_ref.title | split: '-' | first | escape -}}</span>
+        <a href="{{- product_ref.url -}}" class="card-product__title-link focus-inset" role="button">
+          <span class="card-product__title-text">{{- product_ref.title | split: '-' | first | escape -}}</span>
+        </a>
         <div class="card-product__swatch-color-container">
+        {% assign current_card_color_label = '' %}
+        {% for color in product_ref.metafields.shopify.color-pattern.value limit: 1 %}
+          {% assign current_card_color_label = color.label | downcase | strip %}
+        {% endfor %}
         {% for variant in product_ref.metafields.custom.complete_product.value.product_list.value %}
+          {% assign swatch_product_url = variant.url | default: product_ref.url %}
           {% for color in variant.metafields.shopify.color-pattern.value limit: 1 %}
+            {% assign swatch_color_label = color.label | downcase | strip %}
             {% comment %} {{color | json }} {% endcomment %}
-              <span
-                class="card-product__swatch-color"
+              <a
+                href="{{ swatch_product_url }}"
+                class="card-product__swatch-color{% if swatch_color_label != blank and swatch_color_label == current_card_color_label %} is-active{% endif %}"
                 data-color-label="{{ color.label | escape }}"
+                aria-label="{{ color.label | escape }}"
                 style="background-color: {{ color.color }}; display: inline-block; width: 20px; height: 20px;"
-              ></span>
+              ></a>
           {% endfor %}
         {% endfor %}
         </div>
@@ -467,7 +477,7 @@
         {% endfor %}
       </span>
     </div>
-  </a>
+  </div>
 
   {%- if settings.show_product_groups == 'both' or settings.show_product_groups == 'card' -%}
     {%- render 'product-groups', product: product_ref, on: 'card' -%}
