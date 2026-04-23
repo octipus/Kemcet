@@ -65,7 +65,7 @@
     {% if readonly %}readonly{% endif %}
     {% if min %}min="{{- min -}}"{% endif %}
     {% if max %}max="{{- max -}}"{% endif %}
-    {% if required and type == 'password' %}minlength="5"{% endif %}
+    {% if required and type == 'password' %}minlength="3"{% endif %}
     {% if required and type == 'email' %}pattern="^([a-zA-Z0-9_\-\+\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,9})$"{% endif %}
     {% if attr %}{{ attr }}{% endif %}
     class="field__input{{ input_class }}{% if is_form_posted %} hidden{% endif %}"
